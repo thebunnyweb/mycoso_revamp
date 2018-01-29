@@ -371,17 +371,18 @@ a.l-btn:hover.theme-black::after {
 }
 
 .form a.l-btn {
-  font-size: 13px;
+    font-size: 11px;
+    padding: 5px 10px;
 }
 
 .form input,
 .form textarea {
   display: block;
-  padding: 15px 10px;
+  padding: 11px 10px;
   margin-bottom: 15px;
   border: 0;
   border-bottom: 1px solid #000;
-  font-size: 1em;
+  font-size: .8em;
   font-family: 'Khula';
   font-weight: 800;
   width: 100%;
@@ -392,9 +393,9 @@ a.l-btn:hover.theme-black::after {
   background: #ea0000;
   padding: 10px;
   color: #fff;
-  font-size: 2em;
+  font-size: 1em;
   font-weight: 800;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 .form input:focus,
@@ -434,10 +435,10 @@ iframe {
 }
 
 .info p{
-    font-size: 3em;
+    font-size: 2em;
     max-width: 70%;
     margin-left: 20px;
-    line-height: 50px;
+    line-height: 34px;
     font-weight: 800;
     text-align: left;
 }

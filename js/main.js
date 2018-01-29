@@ -55,7 +55,7 @@ $(document).ready(function() {
     css3: true,
     scrollingSpeed: 700,
     fitToSectionDelay: 2500,
-    // responsiveWidth: 768,
+    responsiveWidth: 767,
     onLeave: function(index, nextIndex, direction) {
       TweenMax.to(videographyl2, 0.4, { x: '100%', autoAlpha: 0 });
       TweenMax.to(contact_map, 0.4, { x: '100%', autoAlpha: 0 });
