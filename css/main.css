@@ -41,6 +41,7 @@ nav {
   position: fixed;
   bottom: 50px;
   left: 10%;
+  z-index: 9999;
 }
 
 .links {
@@ -302,6 +303,9 @@ a.l-btn:hover.theme-black::after {
   margin: 10px 0px 20px;
   text-align: center;
   word-wrap: break-word;
+
+
+
 }
 
 #particle-js .reviews .item p:nth-child(2) {
@@ -373,7 +377,7 @@ a.l-btn:hover.theme-black::after {
 .form input,
 .form textarea {
   display: block;
-  padding: 20px 10px;
+  padding: 15px 10px;
   margin-bottom: 15px;
   border: 0;
   border-bottom: 1px solid #000;
@@ -507,16 +511,23 @@ iframe {
 }
 
 @media (max-width: 767px) {
+    header{
+        top: 3%;
+        left: 3%;
+    }
+    .social{
+        display:none;
+    }
   .section {
     padding: 2% 4%;
   }
   .section.l1 .caption {
     font-size: 4em;
-    line-height: 64px;
+    line-height: 51px;
     max-width: 95%;
   }
   .section.l1 .subcaption {
-    font-size: 1.5em;
+    font-size: 1em;
   }
   .videography {
     display: none;
@@ -550,17 +561,20 @@ iframe {
     transform: inherit;
   }
   #particle-js .reviews .item h2 {
-    font-size: 2em;
+    font-size: 1em;
+    margin:0;
+    
   }
   #particle-js .reviews .item p:nth-child(2) {
-    font-size: 14px;
-    line-height: 19px;
+    font-size: 12px;
+    line-height: 16px;
   }
   #particle-js .reviews {
     padding: 20px;
   }
   .cta {
-    margin-top: -50px;
+    margin-top: -100px;
+    margin-left: 3%;
   }
   .cta {
     width: 100% !important;

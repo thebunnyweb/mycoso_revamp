@@ -65,7 +65,7 @@ $(document).ready(function() {
        
       }
       else if (nextIndex === 2) {
-        $('body video')[0].play();
+        // $('body video')[0].play();
 
         TweenMax.staggerFrom(
           staggerElementsl2,
