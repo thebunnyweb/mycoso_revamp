@@ -5,14 +5,8 @@ var autprefixer = require('autoprefixer');
 var pixrem = require('pixrem');
 var precss = require('precss');
 
-
 gulp.task('styles', function() {
-  var plugins = [
-    precss,
-    autprefixer,
-    cssnano,
-    pixrem
-  ];
+  var plugins = [precss, autprefixer, cssnano, pixrem];
 
   return gulp
     .src('./css/main.css')

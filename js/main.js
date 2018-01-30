@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  var videStatus = 'stopped';
   var options = {
     strings: ['Pharma.', 'Novels.', 'Logistics'],
     typeSpeed: 30,
@@ -53,7 +54,7 @@ $(document).ready(function() {
   var contactTimeLine = new TimelineMax();
 
   var windowWidth = $(window).innerWidth();
-  
+
   if (windowWidth > 767) {
     fullpage();
   }
@@ -71,7 +72,10 @@ $(document).ready(function() {
 
         if (nextIndex === 1) {
         } else if (nextIndex === 2) {
-          // $('body video')[0].play();
+          if (videStatus === 'stopped') {
+            $('video')[0].play();
+            videStatus = 'playing';
+          }
 
           TweenMax.staggerFrom(
             staggerElementsl2,
