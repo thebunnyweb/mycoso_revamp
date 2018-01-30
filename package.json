@@ -1,0 +1,30 @@
+{
+  "name": "mycoso",
+  "version": "1.0.0",
+  "description": "Mycoso Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp",
+    "start": "npm run build && node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thebunnyweb/mycoso_revamp.git"
+  },
+  "author": "Harsh Shah hershd1@icloud.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thebunnyweb/mycoso_revamp/issues"
+  },
+  "homepage": "https://github.com/thebunnyweb/mycoso_revamp#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "cssnano": "^3.10.0",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "pixrem": "^4.0.1",
+    "precss": "^3.1.0"
+  }
+}

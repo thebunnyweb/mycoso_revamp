@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Khula:400,800');
+
+$carbon: #4F535F;
+$white: #fff;
+
 * {
   padding: 0;
   margin: 0;
@@ -103,7 +107,7 @@ nav .links ul li a:hover::after {
 }
 
 .links.white ul li a {
-  color: #fff;
+  color: $white;
 }
 
 .links.white ul li a::after {

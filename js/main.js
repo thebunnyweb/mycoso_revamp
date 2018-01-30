@@ -48,105 +48,119 @@ $(document).ready(function() {
   var inputs = $('.section.l4 .form input, .section.l4 .form textarea');
   var inputAction = $('.section.l4 .form a');
   var contact_map = $('.contact_animation');
+  var info = $('.info');
 
   var contactTimeLine = new TimelineMax();
 
-  $('#slider').fullpage({
-    css3: true,
-    scrollingSpeed: 700,
-    fitToSectionDelay: 2500,
-    responsiveWidth: 767,
-    onLeave: function(index, nextIndex, direction) {
-      TweenMax.to(videographyl2, 0.4, { x: '100%', autoAlpha: 0 });
-      TweenMax.to(contact_map, 0.4, { x: '100%', autoAlpha: 0 });
-      TweenMax.to(sectionl1, 0, {background: 'none', ease: Expo.easeOut }) 
+  var windowWidth = $(window).innerWidth();
+  
+  if (windowWidth > 767) {
+    fullpage();
+  }
 
-      if(nextIndex === 1){
-       
-      }
-      else if (nextIndex === 2) {
-        // $('body video')[0].play();
+  function fullpage() {
+    $('#slider').fullpage({
+      css3: true,
+      scrollingSpeed: 700,
+      fitToSectionDelay: 2500,
+      responsiveWidth: 767,
+      onLeave: function(index, nextIndex, direction) {
+        TweenMax.to(videographyl2, 0.4, { x: '100%', autoAlpha: 0 });
+        TweenMax.to(contact_map, 0.4, { x: '100%', autoAlpha: 0 });
+        TweenMax.to(sectionl1, 0, { background: 'none', ease: Expo.easeOut });
 
-        TweenMax.staggerFrom(
-          staggerElementsl2,
-          0.8,
-          { y: 50, ease: Expo.easeOut, delay: 0.5, autoAlpha: 0 },
-          0.1,
-        );
-        TweenMax.fromTo(
-          videographyl2,
-          0.4,
-          { x: '100%', autoAlpha: 0, delay: 0.8, ease: Expo.easeOut },
-          { x: '0%', autoAlpha: 1, delay: 0.8, ease: Expo.easeOut },
-        );
-      } else if (nextIndex === 3) {
-        TweenMax.fromTo(
-          sectionl3,
-          0.5,
-          { backgroundColor: '#fff' },
-          { backgroundColor: '#000', delay: 0.5 },
-        );
-        TweenMax.fromTo(
-          sectionl3caption,
-          0.5,
-          { y: 150, autoAlpha: 0, delay: 1 },
-          { y: 0, autoAlpha: 1, ease: Expo.easeOut, delay: 1 },
-        );
-        TweenMax.fromTo(
-          sectionl3buttons,
-          0.5,
-          { y: 120, autoAlpha: 0 },
-          { y: 0, autoAlpha: 1, ease: Expo.easeOut, delay: 1 },
-        );
-        TweenMax.from(review, 0.5, {
-          x: '100%',
-          autoAlpha: 0,
-          delay: 1.5,
-          ease: Expo.easeOut,
-        });
-        whiteClasses.addClass('white');
-      } else if (nextIndex === 4) {
-        TweenMax.fromTo(
-          contact_map,
-          0.4,
-          { x: '100%', autoAlpha: 0, delay: 0.8, ease: Expo.easeOut },
-          { x: '0%', autoAlpha: 1, delay: 0.8, ease: Expo.easeOut },
-        );
-        contactTimeLine
-          .fromTo(
-            inputcaption,
-            0.2,
-            { y: 150, autoAlpha: 0 },
-            { y: 0, autoAlpha: 1, ease: Expo.easeNone },
-          )
-          .staggerFromTo(
-            inputs,
-            0.2,
-            { x: -20, autoAlpha: 0 },
-            { x: 0, autoAlpha: 1, ease: Expo.easeNone },
-            0.2,
-          )
-          .add('stagger')
-          .fromTo(
-            inputAction,
-            0.2,
-            { x: -20, autoAlpha: 0 },
-            { x: 0, autoAlpha: 1, ease: Expo.easeNone },
-            'stagger+=0.1',
+        if (nextIndex === 1) {
+        } else if (nextIndex === 2) {
+          // $('body video')[0].play();
+
+          TweenMax.staggerFrom(
+            staggerElementsl2,
+            0.8,
+            { y: 50, ease: Expo.easeOut, delay: 0.5, autoAlpha: 0 },
+            0.1,
           );
-      }
+          TweenMax.fromTo(
+            videographyl2,
+            0.4,
+            { x: '100%', autoAlpha: 0, delay: 0.8, ease: Expo.easeOut },
+            { x: '0%', autoAlpha: 1, delay: 0.8, ease: Expo.easeOut },
+          );
+        } else if (nextIndex === 3) {
+          TweenMax.fromTo(
+            sectionl3,
+            0.5,
+            { backgroundColor: '#fff' },
+            { backgroundColor: '#000', delay: 0.5 },
+          );
+          TweenMax.fromTo(
+            sectionl3caption,
+            0.5,
+            { y: 150, autoAlpha: 0, delay: 1 },
+            { y: 0, autoAlpha: 1, ease: Expo.easeOut, delay: 1 },
+          );
+          TweenMax.fromTo(
+            sectionl3buttons,
+            0.5,
+            { y: 120, autoAlpha: 0 },
+            { y: 0, autoAlpha: 1, ease: Expo.easeOut, delay: 1 },
+          );
+          TweenMax.from(review, 0.5, {
+            x: '100%',
+            autoAlpha: 0,
+            delay: 1.5,
+            ease: Expo.easeOut,
+          });
+          whiteClasses.addClass('white');
+        } else if (nextIndex === 4) {
+          TweenMax.fromTo(
+            contact_map,
+            0.4,
+            { x: '100%', autoAlpha: 0, delay: 0.8, ease: Expo.easeOut },
+            { x: '0%', autoAlpha: 1, delay: 0.8, ease: Expo.easeOut },
+          );
+          contactTimeLine
+            .fromTo(
+              inputcaption,
+              0.2,
+              { y: 150, autoAlpha: 0 },
+              { y: 0, autoAlpha: 1, ease: Expo.easeNone },
+            )
+            .staggerFromTo(
+              inputs,
+              0.2,
+              { x: -20, autoAlpha: 0 },
+              { x: 0, autoAlpha: 1, ease: Expo.easeNone },
+              0.2,
+            )
+            .add('stagger')
+            .fromTo(
+              inputAction,
+              0.2,
+              { x: -20, autoAlpha: 0 },
+              { x: 0, autoAlpha: 1, ease: Expo.easeNone },
+              'stagger+=0.1',
+            )
+            .fromTo(
+              info,
+              0.2,
+              { x: 20, autoAlpha: 0 },
+              { x: 0, autoAlpha: 1, ease: Expo.easeNone },
+              'stagger+=0.1',
+            );
+        }
 
-      if (index === 3) {
-        TweenMax.fromTo(
-          sectionl3,
-          0,
-          { backgroundColor: '#000' },
-          { backgroundColor: '#fff' },
-        );
-        whiteClasses.removeClass('white');
-      }
-    },
-  });
+        if (index === 3) {
+          TweenMax.fromTo(
+            sectionl3,
+            0,
+            { backgroundColor: '#000' },
+            { backgroundColor: '#fff' },
+          );
+          whiteClasses.removeClass('white');
+        }
+      },
+    });
+  }
 
   introTimeline
     .to(loader, 2, { width: '85%', ease: Expo.easeOut })
