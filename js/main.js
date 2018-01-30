@@ -72,10 +72,7 @@ $(document).ready(function() {
 
         if (nextIndex === 1) {
         } else if (nextIndex === 2) {
-          if (videStatus === 'stopped') {
-            $('video')[0].play();
-            videStatus = 'playing';
-          }
+          $('video')[0].play();
 
           TweenMax.staggerFrom(
             staggerElementsl2,
