@@ -4,9 +4,13 @@ var cssnano = require('cssnano');
 var autprefixer = require('autoprefixer');
 var pixrem = require('pixrem');
 var precss = require('precss');
+var rename = require('gulp-rename');
+var svgmin = require('gulp-svgmin');
+var svgstore = require('gulp-svgstore');
+var stylefmt = require('stylefmt');
 
 gulp.task('styles', function() {
-  var plugins = [precss, autprefixer, cssnano, pixrem];
+  var plugins = [precss, autprefixer, cssnano];
 
   return gulp
     .src('./css/main.css')
@@ -14,6 +18,15 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./prod/css/'));
 });
 
-gulp.task('default', ['styles'], function() {
-  // gulp.watch('./css/**/*.css', ['styles']);
+gulp.task('spritesvg', function() {
+  return gulp
+    .src('./assets/svg/*.svg')
+    .pipe(rename({ prefix: 'icon-' }))
+    .pipe(svgmin())
+    .pipe(svgstore())
+    .pipe(gulp.dest('./assets/'));
+});
+
+gulp.task('default', ['spritesvg', 'styles'], function() {
+  gulp.watch('./css/**/*.css', ['styles']);
 });

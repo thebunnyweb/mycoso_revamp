@@ -8,6 +8,22 @@ $(document).ready(function() {
 
   var typed = new Typed('.typed', options);
 
+  var lineDrawing = anime({
+    targets: '.pageloader .lines path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 1500,
+    delay: function(el, i) {
+      return i * 250;
+    },
+    direction: 'alternate',
+    loop: false,
+    complete: function() {
+      $('.pageloader').fadeOut(300);
+      introplay();
+    },
+  });
+
   //slick
   $('.carousel').slick({
     slidesToScroll: 1,
@@ -28,7 +44,7 @@ $(document).ready(function() {
   var loader = $('.loader');
   var menu = $('.links ul li');
   var social = $('.social ul li');
-  var whiteClasses = $('.brand p, .links');
+  var whiteClasses = $('.brand p, .links, .social, .brand');
 
   //section l1
 
@@ -57,11 +73,23 @@ $(document).ready(function() {
 
   if (windowWidth > 767) {
     fullpage();
+    links();
+  }
+
+  function links() {
+    $('.links ul li a').on('click', function(e) {
+      e.preventDefault();
+      $('.links ul li a').removeClass('active');
+      let slideNumber = $(this).attr('data-slide');
+      $.fn.fullpage.moveTo(parseInt(slideNumber), 0);
+      $(this).addClass('active');
+    });
   }
 
   function fullpage() {
     $('#slider').fullpage({
       css3: true,
+      menu: '.links ul',
       scrollingSpeed: 700,
       fitToSectionDelay: 2500,
       responsiveWidth: 767,
@@ -163,50 +191,52 @@ $(document).ready(function() {
     });
   }
 
-  introTimeline
-    .to(loader, 2, { width: '85%', ease: Expo.easeOut })
-    .add('loaderScene')
-    .from(
-      introCaption,
-      0.7,
-      { y: 150, autoAlpha: 0, ease: Expo.easeOut },
-      'loaderScene-=1.5',
-    )
-    .from(
-      introSubCaption,
-      0.7,
-      { y: 20, autoAlpha: 0, ease: Expo.easeOut },
-      'loaderScene-=1',
-    )
-    .fromTo(
-      menuIcon,
-      0.4,
-      { x: -20, autoAlpha: 0 },
-      { x: 0, autoAlpha: 1, ease: Expo.easeOut },
-      'loaderScene-=1.5',
-    )
-    .staggerFromTo(
-      menu,
-      0.4,
-      { x: -20, autoAlpha: 0 },
-      { x: 0, autoAlpha: 1, ease: Expo.easeOut },
-      0.2,
-      'loaderScene-=0.8',
-    )
-    .fromTo(
-      logo,
-      0.2,
-      { x: -20, autoAlpha: 0 },
-      { x: 20, autoAlpha: 1, ease: Power0.easeNone },
-      'loaderScene-=1.3',
-    )
-    .staggerFromTo(
-      social,
-      0.2,
-      { y: 20, autoAlpha: 0 },
-      { y: 0, autoAlpha: 1, ease: Expo.easeOut },
-      0.05,
-      'loaderScene-=0.2',
-    )
-    .to(loader, 0, { autoAlpha: 0 }, 'loaderScene-=0.8');
+  function introplay() {
+    introTimeline
+      .to(loader, 2, { width: '85%', ease: Expo.easeOut })
+      .add('loaderScene')
+      .from(
+        introCaption,
+        0.7,
+        { y: 150, autoAlpha: 0, ease: Expo.easeOut },
+        'loaderScene-=1.5',
+      )
+      .from(
+        introSubCaption,
+        0.7,
+        { y: 20, autoAlpha: 0, ease: Expo.easeOut },
+        'loaderScene-=1',
+      )
+      .fromTo(
+        menuIcon,
+        0.4,
+        { x: -20, autoAlpha: 0 },
+        { x: 0, autoAlpha: 1, ease: Expo.easeOut },
+        'loaderScene-=1.5',
+      )
+      .staggerFromTo(
+        menu,
+        0.4,
+        { x: -20, autoAlpha: 0 },
+        { x: 0, autoAlpha: 1, ease: Expo.easeOut },
+        0.2,
+        'loaderScene-=0.8',
+      )
+      .fromTo(
+        logo,
+        0.2,
+        { x: -20, autoAlpha: 0 },
+        { x: 20, autoAlpha: 1, ease: Power0.easeNone },
+        'loaderScene-=1.3',
+      )
+      .staggerFromTo(
+        social,
+        0.2,
+        { y: 20, autoAlpha: 0 },
+        { y: 0, autoAlpha: 1, ease: Expo.easeOut },
+        0.05,
+        'loaderScene-=0.2',
+      )
+      .to(loader, 0, { autoAlpha: 0 }, 'loaderScene-=0.8');
+  }
 });
