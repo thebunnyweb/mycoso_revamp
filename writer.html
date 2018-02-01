@@ -11,31 +11,43 @@
 
 <body class="form-inner">
     <div class="form-intro">
-        <svg class="l-icon" width="40" height="40">
-            <use xlink:href="assets/svg.svg#icon-back">
-        </svg>
-        <p>You are awesome,
-            <span>Writer.</span>
-            </h2>
+        <div class="flex-center">
+            <a href="index.html">
+                <svg class="l-icon" width="40" height="40">
+                    <use xlink:href="assets/svg.svg#icon-back">
+                </svg>
+            </a>
+            <div class="logo">
+                <svg class="l-icon" width="100">
+                    <use xlink:href="assets/svg.svg#icon-logo">
+                </svg>
+            </div>
+        </div>
+
+        <div>
+            <p>You are awesome,
+                <span>Writer.</span>
+            </p>
+        </div>
     </div>
     <main>
         <section class="writer-form">
-            <form action="">
+            <form action="" id="writerForm">
                 <div class="group">
                     <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Ex: John Snow">
+                    <input type="text" id="name" placeholder="Ex: John Snow" name="name">
                 </div>
                 <div class="group">
                     <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Ex: Johnsnow@kingslanding.com">
+                    <input type="email" id="email" placeholder="Ex: Johnsnow@kingslanding.com" name="email">
                 </div>
                 <div class="group">
                     <label for="penname">Pen Name</label>
-                    <input type="text" id="penname" placeholder="Ex: Ressurector">
+                    <input type="text" id="penname" placeholder="Ex: Ressurector" name="penname">
                 </div>
                 <div class="group">
                     <label for="experience">Experience</label>
-                    <select name="experience" id="experience">
+                    <select name="experience" id="experience" name="experience">
                         <option default>Select your experience</option>
                         <option value="1">0-1 Year</option>
                         <option value="1">1-3 Years</option>
@@ -47,27 +59,183 @@
                 </div>
                 <div class="group">
                     <label for="blog">Blog</label>
-                    <input type="text" id="blog" placeholder="Ex: www.hbo.com">
+                    <input type="url" id="blog" placeholder="Ex: www.hbo.com" name="blog">
                 </div>
 
                 <div class="group">
                     <label for="area">Area of Expertise</label>
                     <div class="boxes">
                         <div class="items">
-
-                            <input type="checkbox" id="technology">
-                            <label for="technology">Technology</label>
+                            <label for="technology">
+                                <input type="checkbox" id="technology" name="technology">
+                                <span class="select-box"></span>
+                                <span class="text">Technology</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="food">
+                                <input type="checkbox" id="food" name="food">
+                                <span class="select-box"></span>
+                                <span class="text">Food</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="fashion">
+                                <input type="checkbox" id="fashion" name="fashion">
+                                <span class="select-box"></span>
+                                <span class="text">fashion</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="healthcare">
+                                <input type="checkbox" id="healthcare" name="healthcare">
+                                <span class="select-box"></span>
+                                <span class="text">healthcare</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="lifestyle">
+                                <input type="checkbox" id="lifestyle" name="lifestyle">
+                                <span class="select-box"></span>
+                                <span class="text">lifestyle</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="manufacturing">
+                                <input type="checkbox" id="manufacturing" name="manufacturing">
+                                <span class="select-box"></span>
+                                <span class="text">manufacturing</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="it">
+                                <input type="checkbox" id="it" name="it">
+                                <span class="select-box"></span>
+                                <span class="text">it</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="productivity">
+                                <input type="checkbox" id="productivity" name="productivity">
+                                <span class="select-box"></span>
+                                <span class="text">productivity</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="marketing">
+                                <input type="checkbox" id="marketing" name="marketing">
+                                <span class="select-box"></span>
+                                <span class="text">marketing</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="sociology">
+                                <input type="checkbox" id="sociology" name="sociology">
+                                <span class="select-box"></span>
+                                <span class="text">sociology</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="economics">
+                                <input type="checkbox" id="economics" name="economics">
+                                <span class="select-box"></span>
+                                <span class="text">economics</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="startups">
+                                <input type="checkbox" id="startups" name="startups">
+                                <span class="select-box"></span>
+                                <span class="text">startups</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="content">
+                                <input type="checkbox" id="content" name="content">
+                                <span class="select-box"></span>
+                                <span class="text">website content</span>
+                            </label>
                         </div>
                     </div>
+                </div>
+
+                <div class="group">
+                    <label for="style">Writing Style</label>
+                    <div class="boxes">
+                        <div class="items">
+                            <label for="humour">
+                                <input type="checkbox" id="humour" name="humour">
+                                <span class="select-box"></span>
+                                <span class="text">humour</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="informative">
+                                <input type="checkbox" id="informative" name="informative">
+                                <span class="select-box"></span>
+                                <span class="text">informative</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="lists">
+                                <input type="checkbox" id="lists" name="lists">
+                                <span class="select-box"></span>
+                                <span class="text">lists</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="inspiring">
+                                <input type="checkbox" id="inspiring" name="inspiring">
+                                <span class="select-box"></span>
+                                <span class="text">inspiring</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="group">
+                    <label for="sample">sample of work</label>
+                    <input type="text" id="sample" placeholder="Ex: Game of Thrones" name="sample">
+                </div>
+
+                <div class="group">
+                    <label for="fileupload">
+                        <input type="file" id="fileupload" placeholder="Ex: Game of Thrones" name="fileupload">
+                        <span class="text-btn">File Upload</span>
+                    </label>
+                </div>
+
+                <div class="group action">
+                    <button type="submit">Register with us</button>
                 </div>
 
             </form>
         </section>
     </main>
     <footer>
+        <div class="footwrap">
+            <svg class="l-icon" width="100">
+                <use xlink:href="assets/svg.svg#icon-logo">
+            </svg>
+            <div class="footlinks">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Disclaimer</a></li>
+                    <li><a href="">Press Release</a></li>
+                </ul>
+            </div>
+            <div class="footcontact">
+                <p>We would be <span>happy</span> to assit you</p>
+                <p>help@mucoso.com</p>
+                <p>1800 123 0123</p>
+            </div>
+        </div>
 
     </footer>
 </body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
 <script src="./js/form.js"></script>
 
 </html>

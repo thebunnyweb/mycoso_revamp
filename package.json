@@ -33,6 +33,7 @@
     "stylelint": "^8.4.0"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "jquery-validation": "^1.17.0"
   }
 }

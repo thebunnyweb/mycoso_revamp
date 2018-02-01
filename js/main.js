@@ -5,12 +5,15 @@ $(document).ready(function() {
     typeSpeed: 30,
     loop: true,
   };
+  
+  $('.mask-above h2').fitText(0.2);
 
   var typed = new Typed('.typed', options);
 
   var lineDrawing = anime({
     targets: '.pageloader .lines path',
     strokeDashoffset: [anime.setDashoffset, 0],
+    stroke: '#ea0000',
     easing: 'easeInOutSine',
     duration: 1500,
     delay: function(el, i) {
@@ -23,6 +26,8 @@ $(document).ready(function() {
       introplay();
     },
   });
+
+  
 
   //slick
   $('.carousel').slick({
@@ -89,49 +94,56 @@ $(document).ready(function() {
   function fullpage() {
     $('#slider').fullpage({
       css3: true,
-      menu: '.links ul',
       scrollingSpeed: 700,
       fitToSectionDelay: 2500,
       responsiveWidth: 767,
       onLeave: function(index, nextIndex, direction) {
+
+        $('.links ul li a').removeClass('active');
+        $('.links ul li a[data-slide="'+nextIndex+'"]').addClass('active');
+       
+
         TweenMax.to(videographyl2, 0.4, { x: '100%', autoAlpha: 0 });
         TweenMax.to(contact_map, 0.4, { x: '100%', autoAlpha: 0 });
         TweenMax.to(sectionl1, 0, { background: 'none', ease: Expo.easeOut });
 
         if (nextIndex === 1) {
+
         } else if (nextIndex === 2) {
           $('video')[0].play();
-
+         
           TweenMax.staggerFrom(
             staggerElementsl2,
             0.8,
             { y: 50, ease: Expo.easeOut, delay: 0.5, autoAlpha: 0 },
-            0.1,
-          );
+            0.1
+          )
           TweenMax.fromTo(
             videographyl2,
             0.4,
             { x: '100%', autoAlpha: 0, delay: 0.8, ease: Expo.easeOut },
-            { x: '0%', autoAlpha: 1, delay: 0.8, ease: Expo.easeOut },
-          );
+            { x: '0%', autoAlpha: 1, delay: 0.8, ease: Expo.easeOut }
+          )
+         
         } else if (nextIndex === 3) {
+          
           TweenMax.fromTo(
             sectionl3,
             0.5,
             { backgroundColor: '#fff' },
-            { backgroundColor: '#000', delay: 0.5 },
+            { backgroundColor: '#000', delay: 0.5 }
           );
           TweenMax.fromTo(
             sectionl3caption,
             0.5,
             { y: 150, autoAlpha: 0, delay: 1 },
-            { y: 0, autoAlpha: 1, ease: Expo.easeOut, delay: 1 },
+            { y: 0, autoAlpha: 1, ease: Expo.easeOut, delay: 1 }
           );
           TweenMax.fromTo(
             sectionl3buttons,
             0.5,
             { y: 120, autoAlpha: 0 },
-            { y: 0, autoAlpha: 1, ease: Expo.easeOut, delay: 1 },
+            { y: 0, autoAlpha: 1, ease: Expo.easeOut, delay: 1 }
           );
           TweenMax.from(review, 0.5, {
             x: '100%',
@@ -141,25 +153,27 @@ $(document).ready(function() {
           });
           whiteClasses.addClass('white');
         } else if (nextIndex === 4) {
+
+        
           TweenMax.fromTo(
             contact_map,
             0.4,
             { x: '100%', autoAlpha: 0, delay: 0.8, ease: Expo.easeOut },
-            { x: '0%', autoAlpha: 1, delay: 0.8, ease: Expo.easeOut },
+            { x: '0%', autoAlpha: 1, delay: 0.8, ease: Expo.easeOut }
           );
           contactTimeLine
             .fromTo(
               inputcaption,
               0.2,
               { y: 150, autoAlpha: 0 },
-              { y: 0, autoAlpha: 1, ease: Expo.easeNone },
+              { y: 0, autoAlpha: 1, ease: Expo.easeNone }
             )
             .staggerFromTo(
               inputs,
               0.2,
               { x: -20, autoAlpha: 0 },
               { x: 0, autoAlpha: 1, ease: Expo.easeNone },
-              0.2,
+              0.2
             )
             .add('stagger')
             .fromTo(
@@ -167,15 +181,16 @@ $(document).ready(function() {
               0.2,
               { x: -20, autoAlpha: 0 },
               { x: 0, autoAlpha: 1, ease: Expo.easeNone },
-              'stagger+=0.1',
+              'stagger+=0.1'
             )
             .fromTo(
               info,
               0.2,
               { x: 20, autoAlpha: 0 },
               { x: 0, autoAlpha: 1, ease: Expo.easeNone },
-              'stagger+=0.1',
+              'stagger+=0.1'
             );
+            
         }
 
         if (index === 3) {
@@ -183,7 +198,7 @@ $(document).ready(function() {
             sectionl3,
             0,
             { backgroundColor: '#000' },
-            { backgroundColor: '#fff' },
+            { backgroundColor: '#fff' }
           );
           whiteClasses.removeClass('white');
         }
@@ -199,20 +214,20 @@ $(document).ready(function() {
         introCaption,
         0.7,
         { y: 150, autoAlpha: 0, ease: Expo.easeOut },
-        'loaderScene-=1.5',
+        'loaderScene-=1.5'
       )
       .from(
         introSubCaption,
         0.7,
         { y: 20, autoAlpha: 0, ease: Expo.easeOut },
-        'loaderScene-=1',
+        'loaderScene-=1'
       )
       .fromTo(
         menuIcon,
         0.4,
         { x: -20, autoAlpha: 0 },
         { x: 0, autoAlpha: 1, ease: Expo.easeOut },
-        'loaderScene-=1.5',
+        'loaderScene-=1.5'
       )
       .staggerFromTo(
         menu,
@@ -220,14 +235,14 @@ $(document).ready(function() {
         { x: -20, autoAlpha: 0 },
         { x: 0, autoAlpha: 1, ease: Expo.easeOut },
         0.2,
-        'loaderScene-=0.8',
+        'loaderScene-=0.8'
       )
       .fromTo(
         logo,
         0.2,
         { x: -20, autoAlpha: 0 },
         { x: 20, autoAlpha: 1, ease: Power0.easeNone },
-        'loaderScene-=1.3',
+        'loaderScene-=1.3'
       )
       .staggerFromTo(
         social,
@@ -235,7 +250,7 @@ $(document).ready(function() {
         { y: 20, autoAlpha: 0 },
         { y: 0, autoAlpha: 1, ease: Expo.easeOut },
         0.05,
-        'loaderScene-=0.2',
+        'loaderScene-=0.2'
       )
       .to(loader, 0, { autoAlpha: 0 }, 'loaderScene-=0.8');
   }
