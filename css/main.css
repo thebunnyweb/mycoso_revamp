@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Khula:400,800');
+@import "./jquery.fullpage.css";
+@import "./slick.min.css";
+
+
 $carbon: #4F535F;
 $white: #fff;
 * {
