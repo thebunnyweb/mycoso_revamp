@@ -4,6 +4,7 @@
   "description": "Mycoso Website",
   "main": "index.js",
   "scripts": {
+    "clean": "rimraf app",
     "test": "node test.js",
     "build": "gulp",
     "start": "node server.js"
@@ -36,6 +37,7 @@
     "pixrem": "^4.0.1",
     "postcss-import": "^11.0.0",
     "precss": "^3.1.0",
+    "rimraf": "^2.6.2",
     "stylefmt": "^6.0.0",
     "stylelint": "^8.4.0"
   },

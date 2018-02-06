@@ -237,7 +237,7 @@ nav .links ul li a.active::after {
     font-size: 348px;
     word-wrap: break-word;
     text-transform: uppercase;
-    line-height: 287px;
+    line-height: 288px; 
     margin-top: 50px;
     max-width: 100%;
 }
