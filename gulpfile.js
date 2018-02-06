@@ -28,7 +28,7 @@ gulp.task('imagemin',function(){
 });
 
 gulp.task('htmlmin',function(){
-  return gulp.src('./index.html')
+  return gulp.src('./*.html')
     .pipe(htmlmin())
     .pipe(gulp.dest('./app/')) 
 })
