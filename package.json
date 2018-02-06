@@ -4,6 +4,7 @@
   "description": "Mycoso Website",
   "main": "index.js",
   "scripts": {
+    "prod": "npm run clean && gulp build",
     "clean": "rimraf app",
     "test": "node test.js",
     "build": "gulp",
