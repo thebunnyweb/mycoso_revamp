@@ -903,7 +903,7 @@ svg.l-icon {
         top: -13%;
     }
     .section.l1 {
-        background: url(https://wallup.net/wp-content/uploads/2017/11/22/379527-minimalism-low_poly.jpg) no-repeat;
+        background: url('../assets/mobile-bg.jpg') no-repeat;
         background-position: 50% 0%;
     }
     .section.l1 .subcaption span {
