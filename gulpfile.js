@@ -35,7 +35,7 @@ gulp.task('htmlmin',function(){
 
 
 gulp.task('scripts',function(){
-    gulp.src(['./js/jquery-2.2.4.min.js' , './js/anime.min.js', './js/jquery.fittext.js', './js/typed.min.js', './js/jquery.fullpage.min.js', './js/TweenMax.min.js', './js/slick.min.js', './js/main.js'])
+    gulp.src(['./js/jquery-2.2.4.min.js' , './js/anime.min.js', './js/jquery.fittext.js', './js/typed.min.js', './js/jquery.fullpage.min.js', './js/TweenMax.min.js', './js/slick.min.js', './js/main.js', './js/form.js'])
       .pipe(concat('app.js'))
       .pipe(gulp.dest('./app/js/'))
 });
