@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Khula:400,800');
 @import "./jquery.fullpage.css";
 @import "./slick.min.css";
-
-
 $carbon: #4F535F;
 $white: #fff;
 * {
@@ -237,7 +235,7 @@ nav .links ul li a.active::after {
     font-size: 348px;
     word-wrap: break-word;
     text-transform: uppercase;
-    line-height: 288px; 
+    line-height: 288px;
     margin-top: 50px;
     max-width: 100%;
 }
@@ -497,160 +495,6 @@ iframe {
 
 .legals .linkanchor:last-child::before {
     display: none;
-}
-
-@media (max-width: 1366px) {
-    .mask-above h2 {
-        font-size: 271px;
-        line-height: 239px;
-    }
-}
-
-@media (max-width: 1365px) {
-    .section.l1 .caption {
-        font-size: 7em;
-        line-height: 93px;
-    }
-}
-
-@media (max-width: 1280px) {
-    .section.l1 .caption {
-        font-size: 7em;
-        line-height: 93px;
-    }
-    .mask-above h2 {
-        font-size: 271px;
-        line-height: 239px;
-    }
-    .form {
-        width: 30%;
-    }
-}
-
-@media (max-width: 992px) {
-    /* .section.l1 .caption{
-      font-size: 7em;    
-      line-height: 93px;
-  } */
-    .mask-above h2 {
-        font-size: 222px;
-        line-height: 168px;
-    }
-    .links {
-        display: none;
-    }
-    .section.l1 .subcaption {
-        font-size: 2.5em;
-    }
-    .section.l2 p:first-child {
-        max-width: 50%;
-        font-size: 2em;
-    }
-    .section.l3 p {
-        font-size: 4em;
-    }
-    .cta {
-        width: 50%;
-    }
-    .reviews {
-        width: 50vw;
-    }
-    a.l-btn {
-        margin-bottom: 20px;
-    }
-    .contact {
-        flex-direction: column;
-    }
-    .contact .form {
-        width: 100%;
-    }
-    .contact .form p {
-        font-size: 1em;
-    }
-    .contact .info {
-        display: none;
-    }
-    .contact_animation {
-        display: none;
-    }
-    .form input,
-    .form textarea {
-        padding: 15px 10px;
-    }
-}
-
-@media (max-width: 767px) {
-    header {
-        top: 3%;
-        left: 3%;
-    }
-    .social {
-        display: none;
-    }
-    .section {
-        padding: 2% 4%;
-    }
-    .section.l1 .caption {
-        font-size: 4em;
-        line-height: 51px;
-        max-width: 95%;
-    }
-    .section.l1 .subcaption {
-        font-size: 1em;
-    }
-    .videography {
-        display: none;
-    }
-    .section.l2 p:first-child,
-    .section.l2 p:nth-of-type(2),
-    .section.l2 p:last-child {
-        max-width: 100%;
-    }
-    .section.l2 p:first-child {
-        font-size: 1.5em;
-        line-height: 32px;
-    }
-    .section.l2 p:nth-of-type(2) {
-        line-height: 20px;
-        margin: 20px 0px 20px 0;
-    }
-    .section.l3 p {
-        font-size: 2em;
-    }
-    .reviews {
-        top: inherit;
-        bottom: 0;
-        height: auto;
-        width: 100%;
-    }
-    .carousel {
-        top: inherit;
-        transform: inherit;
-    }
-    #particle-js .reviews .item h2 {
-        font-size: 1em;
-        margin: 0;
-    }
-    #particle-js .reviews .item p:nth-child(2) {
-        font-size: 12px;
-        line-height: 16px;
-    }
-    #particle-js .reviews {
-        padding: 20px;
-    }
-    .cta {
-        margin-top: -100px;
-        margin-left: 3%;
-    }
-    .cta {
-        width: 100% !important;
-    }
-    .contact {
-        flex-direction: column;
-    }
-    .form input {
-        width: 100%;
-    }
 }
 
 .linkanchor {
@@ -927,10 +771,268 @@ svg.l-icon {
                 text-align: right;
                 text-transform: uppercase;
                 font-weight: 800;
-                p span{
-                   color: #ea0000;
+                p span {
+                    color: #ea0000;
                 }
             }
         }
     }
+}
+
+@media (max-width: 1366px) {
+    .mask-above h2 {
+        font-size: 271px;
+        line-height: 239px;
+    }
+}
+
+@media (max-width: 1365px) {
+    .section.l1 .caption {
+        font-size: 7em;
+        line-height: 93px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .section.l1 .caption {
+        font-size: 7em;
+        line-height: 93px;
+    }
+    .mask-above h2 {
+        font-size: 271px;
+        line-height: 239px;
+    }
+    .form {
+        width: 30%;
+    }
+}
+
+@media (max-width: 992px) {
+    /* .section.l1 .caption{
+      font-size: 7em;    
+      line-height: 93px;
+  } */
+    .mask-above h2 {
+        font-size: 222px;
+        line-height: 168px;
+    }
+    .links {
+        display: none;
+    }
+    .section.l1 .subcaption {
+        font-size: 2.5em;
+    }
+    .section.l2 p:first-child {
+        max-width: 50%;
+        font-size: 2em;
+    }
+    .section.l3 p {
+        font-size: 4em;
+    }
+    .cta {
+        width: 50%;
+    }
+    .reviews {
+        width: 50vw;
+    }
+    a.l-btn {
+        margin-bottom: 20px;
+    }
+    .contact {
+        flex-direction: column;
+    }
+    .contact .form {
+        width: 100%;
+    }
+    .contact .form p {
+        font-size: 1em;
+    }
+    /* .contact .info {
+        display: none;
+    }
+    .contact_animation {
+        display: none;
+    } */
+    .form input,
+    .form textarea {
+        padding: 15px 10px;
+    }
+    .form-inner footer .footwrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-inner footer .footwrap svg.l-icon {
+        height: 80px;
+        width: 120px;
+        margin: 0 auto;
+    }
+    .form-inner footer .footwrap .footcontact {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .form-inner section {
+        max-width: 95%
+    }
+    .info {
+        width: 65%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    
+    .brand p {
+        margin-left: 20px;
+    }
+    .section.l1 .caption {
+        margin: 150px 0px 0;
+    }
+    .section.l1 .subcaption{
+        color: #fff;
+    }
+    header {
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        background: rgba(255, 255, 255, .7);
+        transition: all .3s ease;
+    }
+    header.hide{
+        top: -13%;
+    }
+    .section.l1 {
+        background: url(https://wallup.net/wp-content/uploads/2017/11/22/379527-minimalism-low_poly.jpg) no-repeat;
+        background-position: 50% 0%;
+    }
+    .section.l1 .subcaption span {
+        color: #fff;
+    }
+    .section {
+        min-height: 100vh;
+    }
+    .pageloader {
+        display: none;
+    }
+    .social {
+        display: none;
+    }
+    .section {
+        padding: 2% 4%;
+    }
+    .section.l1 .caption {
+        font-size: 4em;
+        line-height: 51px;
+        max-width: 95%;
+    }
+    .section.l1 .subcaption {
+        font-size: 1em;
+    }
+    .videography {
+        display: none;
+    }
+    .section.l2 p:first-child,
+    .section.l2 p:nth-of-type(2),
+    .section.l2 p:last-child {
+        max-width: 100%;
+    }
+    .section.l2 p:first-child {
+        font-size: 1.5em;
+        line-height: 32px;
+    }
+    .section.l2 p:nth-of-type(2) {
+        line-height: 20px;
+        margin: 20px 0px 20px 0;
+    }
+    .section.l3 p {
+        font-size: 2em;
+    }
+    .reviews {
+        top: inherit;
+        bottom: 0;
+        height: auto;
+        width: 100%;
+    }
+    .carousel {
+        top: inherit;
+        transform: inherit;
+    }
+    #particle-js .reviews .item h2 {
+        font-size: 1em;
+        margin: 0;
+    }
+    #particle-js .reviews .item p:nth-child(2) {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    #particle-js .reviews {
+        padding: 20px;
+    }
+    .cta {
+        margin-top: -100px;
+        margin-left: 3%;
+    }
+    .cta {
+        width: 100% !important;
+    }
+    .contact {
+        flex-direction: column;
+    }
+    .form input {
+        width: 100%;
+    }
+    .form-inner section form .items {
+        width: 50%;
+    }
+    .form-inner section form .boxes {
+        max-width: 100%
+    }
+    .form-inner section form .items label span.text {
+        font-size: 12px
+    }
+    .form-inner .form-intro p {
+        display: none;
+    }
+    .section.l2 p:first-child {
+        margin: 100px 0 0;
+    }
+    .cta {
+        margin: 0;
+    }
+    .section.l3 {
+        background: #000;
+        padding: 22% 4%;
+    }
+    .reviews {
+        position: relative;
+        margin-top: 61px;
+        border-radius: 5px;
+    }
+    a.l-btn {
+        margin-top: 10px;
+    }
+    .contact {
+        flex-direction: column;
+    }
+    .contact_animation{
+        position: relative;
+        display: none;
+    }
+    
+    .info{
+        width:100%;
+    }
+    
+    .info p{
+        max-width:100%;
+        font-size: 2.5em;
+        line-height:40px;
+        margin-top:40px
+    }
+    
+    .section.l4{
+        min-height:50vh;
+    }
+    
 }

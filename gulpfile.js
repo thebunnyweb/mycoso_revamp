@@ -76,5 +76,7 @@ gulp.task(
   ['htmlmin', 'styles', 'imagemin', 'spritesvg', 'scripts','mainscripts'],
   function() {
     gulp.watch('./css/**/*.css', ['styles']);
+    gulp.watch('./js/**/*.js', ['scripts','mainscripts']);
+    gulp.watch('./**/*.hmtl',['htmlmin'])
   }
 );
