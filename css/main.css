@@ -880,15 +880,13 @@ svg.l-icon {
 }
 
 @media (max-width: 767px) {
-
-    
     .brand p {
         margin-left: 20px;
     }
     .section.l1 .caption {
         margin: 150px 0px 0;
     }
-    .section.l1 .subcaption{
+    .section.l1 .subcaption {
         color: #fff;
     }
     header {
@@ -896,15 +894,19 @@ svg.l-icon {
         left: 0;
         width: 100%;
         padding: 10px;
-        background: rgba(255, 255, 255, .7);
-        transition: all .3s ease;
+        background: rgba(0, 0, 0, 1);
+        transition: all .1s ease;
     }
-    header.hide{
+    header svg.l-icon {
+        fill: #fff;
+    }
+    header.hide {
         top: -13%;
     }
     .section.l1 {
-        background: url('../assets/mobile-bg.jpg') no-repeat;
+        /* background: url('../assets/mobile-bg.jpg') no-repeat; */
         background-position: 50% 0%;
+        background: #000;
     }
     .section.l1 .subcaption span {
         color: #fff;
@@ -925,6 +927,7 @@ svg.l-icon {
         font-size: 4em;
         line-height: 51px;
         max-width: 95%;
+        color: #fff;
     }
     .section.l1 .subcaption {
         font-size: 1em;
@@ -972,6 +975,7 @@ svg.l-icon {
     .cta {
         margin-top: -100px;
         margin-left: 3%;
+        text-align: center;
     }
     .cta {
         width: 100% !important;
@@ -1011,28 +1015,31 @@ svg.l-icon {
     }
     a.l-btn {
         margin-top: 10px;
+        margin-right: 0;
     }
     .contact {
         flex-direction: column;
     }
-    .contact_animation{
+    .contact_animation {
         position: relative;
         display: none;
     }
-    
-    .info{
-        width:100%;
+    .info {
+        width: 100%;
     }
-    
-    .info p{
-        max-width:100%;
+    .info p {
+        max-width: 100%;
         font-size: 2.5em;
-        line-height:40px;
-        margin-top:40px
+        line-height: 40px;
+        margin-top: 40px
     }
-    
-    .section.l4{
-        min-height:50vh;
+    .section.l4 {
+        min-height: 50vh;
     }
-    
+    .brand p {
+        color: #fff;
+    }
+    .info a{
+        margin-top: 15px;
+    }
 }

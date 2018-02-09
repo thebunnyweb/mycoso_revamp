@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+
   var options = {
     strings: ['Pharma.', 'Novels.', 'Logistics'],
     typeSpeed: 30,
@@ -13,6 +15,8 @@ $(document).ready(function() {
     autoplay: true,
     autoplaySpeed: 2000
   });
+
+
 
   if ($(window).innerWidth() > 767) {
     var videStatus = 'stopped';
@@ -87,7 +91,7 @@ $(document).ready(function() {
       $('.links ul li a').on('click', function(e) {
         e.preventDefault();
         $('.links ul li a').removeClass('active');
-        let slideNumber = $(this).attr('data-slide');
+        var slideNumber = $(this).attr('data-slide');
         $.fn.fullpage.moveTo(parseInt(slideNumber), 0);
         $(this).addClass('active');
       });
@@ -263,5 +267,6 @@ $(document).ready(function() {
         
       });
   }
+
 
 });
