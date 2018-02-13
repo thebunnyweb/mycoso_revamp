@@ -50,6 +50,12 @@ $(document).ready(function() {
       },
       experience: {
         required: true
+      },
+      'area_of_expertise[]': {
+        minlength: 2
+      },
+      'writing_style[]': {
+        minlength: 2
       }
     },
     messages: {
@@ -69,7 +75,16 @@ $(document).ready(function() {
       },
       experience: {
         required: 'Select your experience'
+      },
+      'area_of_expertise[]': {
+        minlength: 'Atleast two is to be selected'
+      },
+      'writing_style[]': {
+        minlength: 'Atleast two is to be selected'
       }
+    },
+    submitHandler: function(form) {
+        
     }
   });
 });

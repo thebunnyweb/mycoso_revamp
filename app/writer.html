@@ -32,7 +32,7 @@
     </div>
     <main>
         <section class="writer-form">
-            <form action="" id="writerForm">
+            <form id="writerForm" method="POST">
                 <div class="group">
                     <label for="name">Name</label>
                     <input type="text" id="name" placeholder="Ex: John Snow" name="name">
@@ -63,134 +63,138 @@
                 </div>
 
                 <div class="group">
-                    <label for="area">Area of Expertise</label>
+                    <label for="area">Area of Expertise</label><br>
+                    <label for="area_of_expertise[]" class="error"></label>
                     <div class="boxes">
                         <div class="items">
                             <label for="technology">
-                                <input type="checkbox" id="technology" name="technology">
+                                <input type="checkbox" id="technology" value="technology" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">Technology</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="food">
-                                <input type="checkbox" id="food" name="food">
+                                <input type="checkbox" id="food" value="food" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">Food</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="fashion">
-                                <input type="checkbox" id="fashion" name="fashion">
+                                <input type="checkbox" id="fashion" value="fashion" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">fashion</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="healthcare">
-                                <input type="checkbox" id="healthcare" name="healthcare">
+                                <input type="checkbox" id="healthcare" value="healthcare" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">healthcare</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="lifestyle">
-                                <input type="checkbox" id="lifestyle" name="lifestyle">
+                                <input type="checkbox" id="lifestyle" value="lifestyle" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">lifestyle</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="manufacturing">
-                                <input type="checkbox" id="manufacturing" name="manufacturing">
+                                <input type="checkbox" id="manufacturing" value="manufacturing" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">manufacturing</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="it">
-                                <input type="checkbox" id="it" name="it">
+                                <input type="checkbox" id="it" value="it" name="it">
                                 <span class="select-box"></span>
                                 <span class="text">it</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="productivity">
-                                <input type="checkbox" id="productivity" name="productivity">
+                                <input type="checkbox" id="productivity" value="productivity" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">productivity</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="marketing">
-                                <input type="checkbox" id="marketing" name="marketing">
+                                <input type="checkbox" id="marketing" value="marketing" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">marketing</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="sociology">
-                                <input type="checkbox" id="sociology" name="sociology">
+                                <input type="checkbox" id="sociology" value="sociology" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">sociology</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="economics">
-                                <input type="checkbox" id="economics" name="economics">
+                                <input type="checkbox" id="economics" value="economics" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">economics</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="startups">
-                                <input type="checkbox" id="startups" name="startups">
+                                <input type="checkbox" id="startups" value="startups" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">startups</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="content">
-                                <input type="checkbox" id="content" name="content">
+                                <input type="checkbox" id="content" value="content" name="area_of_expertise[]">
                                 <span class="select-box"></span>
                                 <span class="text">website content</span>
                             </label>
                         </div>
                     </div>
+                   
                 </div>
 
                 <div class="group">
-                    <label for="style">Writing Style</label>
+                    <label for="style">Writing Style</label><br>
+                    <label for="writing_style[]" class="error"></label>
                     <div class="boxes">
                         <div class="items">
                             <label for="humour">
-                                <input type="checkbox" id="humour" name="humour">
+                                <input type="checkbox" id="humour" value="humour" name="writing_style[]">
                                 <span class="select-box"></span>
                                 <span class="text">humour</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="informative">
-                                <input type="checkbox" id="informative" name="informative">
+                                <input type="checkbox" id="informative" value="informative" name="writing_style[]">
                                 <span class="select-box"></span>
                                 <span class="text">informative</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="lists">
-                                <input type="checkbox" id="lists" name="lists">
+                                <input type="checkbox" id="lists" value="lists" name="writing_style[]">
                                 <span class="select-box"></span>
                                 <span class="text">lists</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="inspiring">
-                                <input type="checkbox" id="inspiring" name="inspiring">
+                                <input type="checkbox" id="inspiring" value="inspiring" name="writing_style[]">
                                 <span class="select-box"></span>
                                 <span class="text">inspiring</span>
                             </label>
                         </div>
                     </div>
+                   
                 </div>
                 <div class="group">
                     <label for="sample">sample of work</label>
