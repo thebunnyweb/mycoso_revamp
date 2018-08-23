@@ -54,7 +54,7 @@ header {
     top: 10%;
     left: 10%;
     z-index: 9;
-    width: 80%;
+    width: 60%;
 }
 
 nav {
@@ -155,10 +155,10 @@ nav .links ul li a.active::after {
 }
 
 .section.l1 .caption {
-    font-size: 10em;
+    font-size: 6em;
     font-weight: 800;
-    line-height: 133px;
-    max-width: 93%;
+    line-height: 86px;
+    max-width: 83%;
     /* color: #4F535F; */
     margin-top: 50px;
 }
@@ -438,20 +438,22 @@ address {
     width: 30vw;
     height: 100vh;
     z-index: 9;
-    padding: 20px;
-    background: #000;
-    ;
+    padding: 0px;
+    background: #fff;
 }
 
 iframe {
     width: 100%;
     height: 40%;
+    padding: 0 10px;
+    position: absolute;
+    bottom: 0;
 }
 
 .feedback {
-    padding: 20px;
+    padding: 20px 11px;
     background: #fff;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     p{
         text-transform: uppercase;
         font-weight: 800;
@@ -465,6 +467,12 @@ iframe {
             color: #43454f;
         }
         input {
+            width: 100%;
+            padding: 10px;
+            display: block;
+            box-sizing: border-box;
+        }
+        textarea {
             width: 100%;
         }
     }
@@ -695,7 +703,7 @@ svg.l-icon {
                 width: 0px;
                 height: 0px;
             }
-            span.text-btn {
+            span.text-btn, .text-btn {
                 padding: 10px 30px 10px 10px;
                 background: #000;
                 color: #fff;
@@ -703,6 +711,8 @@ svg.l-icon {
                 position: relative;
                 user-select: none;
                 transition: all .3s ease-in-out;
+                display: inline-block;
+                margin-left: -10px;
                 &::before {
                     content: "";
                     position: absolute;
@@ -1067,4 +1077,34 @@ svg.l-icon {
     .info a {
         margin-top: 15px;
     }
+}
+
+
+a.l-btn.inverse {
+    border: 2px solid transparent;
+    border-radius: 0px;
+    color: #fff;
+    background: #000;
+}
+
+a.l-btn.inverse:hover {
+    transition: all .3s ease;
+    background: white;
+    border: 2px solid #000;
+    color: #ea0000;
+}
+
+.feedback .l-btn.inverse {
+    margin-top: 10px;
+}
+
+
+.section.l2[direction="up"] .mask {
+    margin-top: 25px
+
+}
+
+.section.l3[direction="up"] .reviews {
+    margin-top: 25px
+    
 }
