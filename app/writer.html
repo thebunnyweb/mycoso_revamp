@@ -32,7 +32,7 @@
     </div>
     <main>
         <section class="writer-form">
-            <form id="writerForm" method="POST">
+            <form id="writerForm" method="POST" enctype="multipart/form-data">
                 <div class="group">
                     <label for="name">Name</label>
                     <input type="text" id="name" placeholder="Ex: John Snow" name="name">
@@ -63,7 +63,8 @@
                 </div>
 
                 <div class="group">
-                    <label for="area">Area of Expertise</label><br>
+                    <label for="area">Area of Expertise</label>
+                    <br>
                     <label for="area_of_expertise[]" class="error"></label>
                     <div class="boxes">
                         <div class="items">
@@ -158,11 +159,12 @@
                             </label>
                         </div>
                     </div>
-                   
+
                 </div>
 
                 <div class="group">
-                    <label for="style">Writing Style</label><br>
+                    <label for="style">Writing Style</label>
+                    <br>
                     <label for="writing_style[]" class="error"></label>
                     <div class="boxes">
                         <div class="items">
@@ -194,16 +196,16 @@
                             </label>
                         </div>
                     </div>
-                   
+
                 </div>
                 <div class="group">
                     <label for="sample">sample of work</label>
-                    <input type="text" id="sample" placeholder="Ex: Game of Thrones" name="sample">
+                    <input type="text" id="sample" placeholder="Ex: Game of Thrones" name="sample_of_work">
                 </div>
 
                 <div class="group">
                     <label for="fileupload">
-                        <input type="file" id="fileupload" placeholder="Ex: Game of Thrones" name="fileupload">
+                        <input type="file" id="fileupload" placeholder="Ex: Game of Thrones" name="file">
                         <span class="text-btn">File Upload</span>
                     </label>
                 </div>
