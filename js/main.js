@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
 
   var options = {
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
   if ($(window).innerWidth() > 767) {
     var videStatus = 'stopped';
-   
+
 
     $('.mask-above h2').fitText(0.2);
 
@@ -31,18 +31,18 @@ $(document).ready(function() {
       stroke: '#ea0000',
       easing: 'easeInOutSine',
       duration: 1500,
-      delay: function(el, i) {
+      delay: function (el, i) {
         return i * 250;
       },
       direction: 'alternate',
       loop: false,
-      complete: function() {
+      complete: function () {
         $('.pageloader').fadeOut(300);
         introplay();
       }
     });
 
- 
+
 
     //Intro Page
 
@@ -88,7 +88,7 @@ $(document).ready(function() {
     }
 
     function links() {
-      $('.links ul li a').on('click', function(e) {
+      $('.links ul li a').on('click', function (e) {
         e.preventDefault();
         $('.links ul li a').removeClass('active');
         var slideNumber = $(this).attr('data-slide');
@@ -103,8 +103,31 @@ $(document).ready(function() {
         scrollingSpeed: 700,
         fitToSectionDelay: 2500,
         responsiveWidth: 767,
-        onLeave: function(index, nextIndex, direction) {
+        onLeave: function (index, nextIndex, direction) {
+
+
+
+          switch (nextIndex) {
+            case 1:
+              $('.section.l1').attr('direction', direction);
+              break;
+            case 2:
+              $('.section.l2').attr('direction', direction);
+              break;
+            case 3:
+              $('.section.l3').attr('direction', direction);
+              break;
+            case 4:
+              $('.section.l4').attr('direction', direction);
+              break;
+            default:
+              $('.section.l1').attr('direction', direction);
+              break;
+          }
+
+
           $('.links ul li a').removeClass('active');
+
           $('.links ul li a[data-slide="' + nextIndex + '"]').addClass(
             'active'
           );
@@ -115,8 +138,8 @@ $(document).ready(function() {
 
           if (nextIndex === 1) {
           } else if (nextIndex === 2) {
-            $('video')[0].play();
 
+            $('video')[0].play();
             TweenMax.staggerFrom(
               staggerElementsl2,
               0.8,
@@ -254,18 +277,18 @@ $(document).ready(function() {
         )
         .to(loader, 0, { autoAlpha: 0 }, 'loaderScene-=0.8');
     }
-  }else{
-      var windowCurrentPosition = 0;
-      $(window).scroll(function(){  
-        if(windowCurrentPosition < $(window).scrollTop()){
-          $('header').addClass('hide');
-          windowCurrentPosition = $(window).scrollTop();
-        }else{
-          $('header').removeClass('hide');
-          windowCurrentPosition = $(window).scrollTop();
-        }
-        
-      });
+  } else {
+    var windowCurrentPosition = 0;
+    $(window).scroll(function () {
+      if (windowCurrentPosition < $(window).scrollTop()) {
+        $('header').addClass('hide');
+        windowCurrentPosition = $(window).scrollTop();
+      } else {
+        $('header').removeClass('hide');
+        windowCurrentPosition = $(window).scrollTop();
+      }
+
+    });
   }
 
 
