@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   var formTimeline = new TimelineMax();
   var header = $('.form-intro');
   var svgs = $('.form-inner .form-intro .flex-center');
@@ -84,7 +85,34 @@ $(document).ready(function() {
       }
     },
     submitHandler: function(form) {
-        
+       //var formdata = $(form).serialize();
+       
+      var formdata = new FormData($('#writerForm'));
+      formdata.append('name', $('input[name="name"]').val());
+      formdata.append('email', $('input[name="email"]').val());
+      formdata.append('pen_name', $('input[name="penname"]').val());
+      formdata.append('experience', $('input[name="experience"]').val());
+      formdata.append('blog', $('input[name="blog"]').val());
+      formdata.append('area_of_expertise[]', $('input[name="area_of_expertise[]"]').val());
+      formdata.append('writing_style[]', $('input[name="writing_style[]"]').val());
+      formdata.append('sample_of_work', $('input[name="sample_of_work"]').val());
+      formdata.append('file', $('input[name="file"]')[0].files[0]);
+        $.ajax({
+          url: 'https://glauconitic-crosses.000webhostapp.com?writeradd=new',
+          dataType: 'JSON',
+          data: formdata,
+          type: 'POST',
+          processData: false, 
+          contentType: false,
+          success: function(result){
+            console.log(result);
+          },
+          error: function(error){
+            console.log(error);
+          }
+        });
     }
   });
+
+
 });
