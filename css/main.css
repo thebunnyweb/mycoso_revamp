@@ -439,7 +439,7 @@ address {
     height: 100vh;
     z-index: 9;
     padding: 0px;
-    background: #fff;
+    background: #000;
 }
 
 iframe {
@@ -452,25 +452,40 @@ iframe {
 
 .feedback {
     padding: 20px 11px;
-    background: #fff;
+    background: #000;
     margin-bottom: 20px;
     p{
         text-transform: uppercase;
         font-weight: 800;
         font-size: 18px;
+        color: #fff;
     }
     form {
         label {
             display: block;
-            text-transform: uppercase;
-            font-size: 18px;
-            color: #43454f;
+            text-transform: capitalize;
+            font-size: 15px;
+            color: #f9f9f9;
+            margin-top: 10px;
         }
         input {
             width: 100%;
-            padding: 10px;
-            display: block;
-            box-sizing: border-box;
+    padding: 5px 5px 5px 0;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #adadad;
+    margin-bottom: 28px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 16px;
+
+            
+        }
+        input:focus {
+            outline: none;
         }
         textarea {
             width: 100%;
@@ -1095,7 +1110,8 @@ a.l-btn.inverse:hover {
 }
 
 .feedback .l-btn.inverse {
-    margin-top: 10px;
+    margin-top: 15px;
+    background: #ea0000;
 }
 
 
@@ -1190,4 +1206,32 @@ a.l-btn.inverse.small {
     font-size: 18px;
     font-weight: 800;
     cursor: pointer;
+}
+
+
+.feedback form input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+}
+
+.feedback .radio label{
+    display: inline-block;
+    margin: 0;
+
+}
+
+.form-group.message label {
+    margin-top: 27px;
+}
+
+.form-group.message textarea {
+    background: transparent;
+    border: 1px solid #adadad;
+    padding:  3px 10px;
+    color: #fff;
+}
+
+.feedback form label{
+    margin-left: 2px;
 }
