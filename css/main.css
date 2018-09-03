@@ -1132,3 +1132,62 @@ h2.divider{
     left: 0;
     color: #ea0000;
 }
+
+
+.overlay {
+    position: fixed;
+    background: rgba(0,0,0,.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 10px;
+    z-index: 9999;
+    display: none;
+}
+
+.overlay .popup {
+    max-width: 360px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 13px 13px rgba(0,0,0,.2);
+}
+
+
+.overlay .popup .p_header p {
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+.overlay .popup .p_content p:first-child {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 0 0 15px 0;
+}
+
+.overlay .popup .p_content p:nth-of-type(2) {
+    font-size: 12px;
+    line-height: 20px;
+    color: #aaa;
+}
+
+
+
+a.l-btn.inverse.small {
+    margin-top: 9px;
+    font-size: 12px;
+}
+
+.overlay .popup .close {
+    position: absolute;
+    right: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+}

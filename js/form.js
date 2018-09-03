@@ -33,6 +33,12 @@ $(document).ready(function() {
     }
   });
 
+  $('.overlay .popup .close').on('click', function(){
+    $('.overlay').css('display', 'none');
+    $('#writerForm')[0].reset();
+});
+
+
   $('#writerForm').validate({
     rules: {
       name: {
@@ -105,7 +111,9 @@ $(document).ready(function() {
           processData: false, 
           contentType: false,
           success: function(result){
-            console.log(result);
+            if(result.length > 0 ){
+              $('.overlay').css('display', 'block');
+            }
           },
           error: function(error){
             console.log(error);

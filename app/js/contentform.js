@@ -33,6 +33,14 @@ $(document).ready(function () {
         }
     });
 
+
+    $('.overlay .popup .close').on('click', function(){
+        $('.overlay').css('display', 'none');
+        $('#contentForm')[0].reset();
+    });
+
+
+
     $('#contentForm').validate({
         rules: {
             name: {
@@ -70,16 +78,37 @@ $(document).ready(function () {
         },
         submitHandler: function (form) {
         
-            let formData = $(form).serialize();
+            var formData = new FormData($('#contentForm'));
+            formData.append('name',$('input[name="name"]').val());
+            formData.append('email',$('input[name="email"]').val());
+            formData.append('compname',$('input[name="compname"]').val());
+            formData.append('desgname',$('input[name="desgname"]').val());
+            formData.append('website',$('input[name="website"]').val());
+            formData.append('fbprofile',$('input[name="fbprofile"]').val());
+            formData.append('fbpage',$('input[name="fbpage"]').val());
+
+            formData.append('twitter',$('input[name="twitter"]').val());
+            formData.append('instagram',$('input[name="instagram"]').val());
+            formData.append('pinterest',$('input[name="pinterest"]').val());
+            formData.append('google',$('input[name="google"]').val());
+            
+            formData.append('other',$('input[name="other"]').val());
+            
+            formData.append('industry',$('input[name="industry"]').val());
+            formData.append('expertise',$('input[name="expertise"]').val());
+            
+
             $.ajax({
-                url: 'http://localhost/mycoso_backend?contentadd=new',
+                url: 'https://glauconitic-crosses.000webhostapp.com/?contentadd=new',
                 dataType: 'JSON',
                 data: formData, 
-                method: 'POST',
+                type: 'POST',
                 processData: false, 
                 contentType: false,
                 success: function(result){
-                    console.log(result);
+                    if(result.length > 0 ){
+                        $('.overlay').css('display', 'block');
+                    }
                 },
                 error: function(e){
                     console.log('error', e)
