@@ -251,7 +251,7 @@ nav .links ul li a.active::after {
     text-transform: uppercase;
 }
 
-a.l-btn {
+a.l-btn, button.l-btn {
     text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
@@ -262,9 +262,10 @@ a.l-btn {
     margin-right: 20px;
     font-weight: 800;
     position: relative;
+    cursor: pointer;
 }
 
-a.l-btn.theme-black {
+a.l-btn.theme-black, button.l-btn.theme-black  {
     color: #000;
 }
 
@@ -272,7 +273,7 @@ a.l-btn.theme-black {
     transition: all 0.4s ease;
 }
 
-a.l-btn::after {
+a.l-btn::after, button.l-btn::after {
     content: '→';
     display: inline-block;
     margin-left: 10px;
@@ -280,28 +281,28 @@ a.l-btn::after {
     color: #fff;
 }
 
-a.l-btn.theme-black::after {
+a.l-btn.theme-black::after, button.l-btn.theme-black::after {
     color: #000;
 }
 
-a.l-btn:hover {
+a.l-btn:hover, button.l-btn:hover {
     background: #fff;
     color: #ea0000;
     border-color: #fff;
 }
 
-a.l-btn.theme-black:hover {
+a.l-btn.theme-black:hover, button.l-btn.theme-black:hover  {
     background: #000;
     color: #fff;
     border-color: #000;
 }
 
-a.l-btn:hover::after {
+a.l-btn:hover::after, button.l-btn:hover::after {
     color: #ea0000;
     transform: translateX(5px);
 }
 
-a.l-btn:hover.theme-black::after {
+a.l-btn:hover.theme-black::after, button.l-btn:hover.theme-black::after  {
     color: #fff;
 }
 
@@ -1095,14 +1096,14 @@ svg.l-icon {
 }
 
 
-a.l-btn.inverse {
+a.l-btn.inverse, button.l-btn.inverse {
     border: 2px solid transparent;
     border-radius: 0px;
     color: #fff;
     background: #000;
 }
 
-a.l-btn.inverse:hover {
+a.l-btn.inverse:hover, button.l-btn.inverse:hover {
     transition: all .3s ease;
     background: white;
     border: 2px solid #000;
@@ -1195,7 +1196,7 @@ h2.divider{
 
 
 
-a.l-btn.inverse.small {
+a.l-btn.inverse.small, button.l-btn.inverse.small {
     margin-top: 9px;
     font-size: 12px;
 }
@@ -1234,4 +1235,32 @@ a.l-btn.inverse.small {
 
 .feedback form label{
     margin-left: 2px;
+}
+
+
+.feedback form label.error {color: #ea0000;margin: 0;position: absolute;bottom: -23px;font-size: 14px;text-transform: uppercase;font-weight: 800;}
+
+.form-group {
+    position: relative;
+}
+
+
+.overlay.contact {
+    background: rgba(0,0,0,.9);
+}
+
+.message p {
+    padding: 0 30px;
+}
+
+.message{
+    position: relative;
+    top: 50%;
+}
+.overlay.contact .l-btn {
+    transform: translateX(30px);
+}
+
+p.note{
+    font-size: 12px;
 }

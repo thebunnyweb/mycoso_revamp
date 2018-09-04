@@ -291,5 +291,74 @@ $(document).ready(function () {
     });
   }
 
+  $('.overlay.contact .l-btn').on('click', function(){
+    $('.overlay.contact').css('display', 'none');
+    $('#contactForm')[0].reset();
+  })
+
+  $('#contactForm').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      phone: {
+        number: true,
+        maxlength: 10,
+        minlength: 10
+      },
+      message: {
+        maxlength: 500
+      }
+    },
+    messages: {
+      name: {
+        required: 'Field is required.',
+        minlength: 'Please enter atleast 2 Characters'
+      },
+      email: {
+        required: 'Field is required.',
+        email: 'Invalid Email'
+      },
+      phone: {
+        number: 'Only digits are allowed.',
+        maxlength: 'Only 10 digits are allowed.',
+        minlength: 'Invalid Phone Number'
+      },
+      message: {
+        maxlength: 'Reached Max Count.'
+      }
+    },
+    submitHandler: function(form){
+      var formData = new FormData($('#contactForm'));
+      formData.append('name', $('input[name="name"]').val());
+      formData.append('email', $('input[name="email"]').val());
+      formData.append('phone', $('input[name="phone"]').val());
+      formData.append('profession', $('input[name="profession"]').val());
+      formData.append('message', $('#message').val());
+
+      $.ajax({
+        url: 'https://glauconitic-crosses.000webhostapp.com?contactadd=new',
+        dataType: 'JSON',
+        data: formData,
+        type: 'POST', 
+        processData: false, 
+        contentType: false,
+        success: function(result){
+          if(result.length > 0 ){
+            $('.overlay.contact').css('display', 'block');
+          }
+        },
+        error: function(e){
+          console.log('error', e)
+        }
+      });
+      
+    }
+  })
 
 });
