@@ -38,6 +38,15 @@ $(document).ready(function() {
     $('#writerForm')[0].reset();
 });
 
+$('#other').on('change', function(){
+  
+  if($('#other').is(':checked')){
+    $('input[name="other_category"]').css('display', 'block');
+  }else{
+    $('input[name="other_category"]').css('display', 'none');
+  }
+  
+});
 
   $('#writerForm').validate({
     rules: {
@@ -49,7 +58,7 @@ $(document).ready(function() {
         required: true,
         email: true
       },
-      sample: {
+      sample_of_work: {
         required: true
       },
       fileupload: {
@@ -59,10 +68,15 @@ $(document).ready(function() {
         required: true
       },
       'area_of_expertise[]': {
-        minlength: 2
+        minlength: 3,
+        maxlength: 6
       },
       'writing_style[]': {
-        minlength: 2
+        minlength: 1,
+        maxlength: 3
+      },
+      other_category: {
+        required: true
       }
     },
     messages: {
@@ -71,23 +85,28 @@ $(document).ready(function() {
         minlength: 'Make you name a little bigger.'
       },
       email: {
-        required: 'Please enter your email',
-        email: 'Woohps thats not really an email'
+        required: 'Please enter your email.',
+        email: 'Woohps thats not really an email.'
       },
-      sample: {
-        required: 'Sharing is must'
+      sample_of_work: {
+        required: 'Sharing is must.'
       },
       fileupload: {
-        required: 'Upload the document for review'
+        required: 'Upload the document for review.'
       },
       experience: {
-        required: 'Select your experience'
+        required: 'Select your experience.'
       },
       'area_of_expertise[]': {
-        minlength: 'Atleast two is to be selected'
+        minlength: 'Atleast three is to be selected.',
+        maxlength: 'You can only select maximum of 6 categories.'
       },
       'writing_style[]': {
-        minlength: 'Atleast two is to be selected'
+        minlength: 'Atleast One is to be selected.',
+        maxlength: 'You can only select maximum of 3 categories.'
+      },
+      other_category: {
+        required: 'Field is required.'
       }
     },
     submitHandler: function(form) {
@@ -97,28 +116,45 @@ $(document).ready(function() {
       formdata.append('name', $('input[name="name"]').val());
       formdata.append('email', $('input[name="email"]').val());
       formdata.append('pen_name', $('input[name="penname"]').val());
-      formdata.append('experience', $('input[name="experience"]').val());
+      formdata.append('experience', $('select[name="experience"]').val());
       formdata.append('blog', $('input[name="blog"]').val());
-      formdata.append('area_of_expertise[]', $('input[name="area_of_expertise[]"]').val());
-      formdata.append('writing_style[]', $('input[name="writing_style[]"]').val());
       formdata.append('sample_of_work', $('input[name="sample_of_work"]').val());
       formdata.append('file', $('input[name="file"]')[0].files[0]);
-        $.ajax({
-          url: 'https://glauconitic-crosses.000webhostapp.com?writeradd=new',
-          dataType: 'JSON',
-          data: formdata,
-          type: 'POST',
-          processData: false, 
-          contentType: false,
-          success: function(result){
-            if(result.length > 0 ){
-              $('.overlay').css('display', 'block');
-            }
-          },
-          error: function(error){
-            console.log(error);
-          }
-        });
+
+
+      var areaOfExpertise = $('input[name="area_of_expertise[]"]:checked').map(function(i, e) {return e.value}).toArray();
+      var writingStyle = $('input[name="writing_style[]"]:checked').map(function(i, e) {return e.value}).toArray();
+
+
+      if($('#other').is(':checked')){
+        var otherindex = areaOfExpertise.indexOf("other");
+        areaOfExpertise.splice(otherindex, 1);
+        var otherData = $('input[name="other_category"]').val();
+        areaOfExpertise.push(otherData);
+        
+      }
+
+      formdata.append('area_of_expertise[]', areaOfExpertise);
+      formdata.append('writing_style[]', writingStyle);
+      
+
+
+        // $.ajax({
+        //   url: 'https://glauconitic-crosses.000webhostapp.com?writeradd=new',
+        //   dataType: 'JSON',
+        //   data: formdata,
+        //   type: 'POST',
+        //   processData: false, 
+        //   contentType: false,
+        //   success: function(result){
+        //     if(result.length > 0 ){
+        //       $('.overlay').css('display', 'block');
+        //     }
+        //   },
+        //   error: function(error){
+        //     console.log(error);
+        //   }
+        // });
     }
   });
 

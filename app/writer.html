@@ -48,11 +48,11 @@
         <section class="writer-form">
             <form id="writerForm" method="POST" enctype="multipart/form-data">
                 <div class="group">
-                    <label for="name">Name</label>
+                    <label for="name">Name *</label>
                     <input type="text" id="name" placeholder="Ex: John Snow" name="name">
                 </div>
                 <div class="group">
-                    <label for="email">Email</label>
+                    <label for="email">Email *</label>
                     <input type="email" id="email" placeholder="Ex: Johnsnow@kingslanding.com" name="email">
                 </div>
                 <div class="group">
@@ -60,19 +60,19 @@
                     <input type="text" id="penname" placeholder="Ex: Ressurector" name="penname">
                 </div>
                 <div class="group">
-                    <label for="experience">Experience</label>
+                    <label for="experience">Experience *</label>
                     <select name="experience" id="experience" name="experience">
-                        <option default>Select your experience</option>
-                        <option value="1">0-1 Year</option>
-                        <option value="1">1-3 Years</option>
-                        <option value="1">3-5 Years</option>
-                        <option value="1">5-7 Years</option>
-                        <option value="1">7-10 Years</option>
-                        <option value="1">10+ Years</option>
+                        <option value="" default>Select your experience</option>
+                        <option value="0-1 Year">0-1 Year</option>
+                        <option value="1-3 Years">1-3 Years</option>
+                        <option value="3-5 Years">3-5 Years</option>
+                        <option value="5-7 Years">5-7 Years</option>
+                        <option value="7-10 Years">7-10 Years</option>
+                        <option value="10+ Years">10+ Years</option>
                     </select>
                 </div>
                 <div class="group">
-                    <label for="blog">Blog</label>
+                    <label for="blog">Blog/Website Link</label>
                     <input type="url" id="blog" placeholder="Ex: www.hbo.com" name="blog">
                 </div>
 
@@ -83,94 +83,109 @@
                     <div class="boxes">
                         <div class="items">
                             <label for="technology">
-                                <input type="checkbox" id="technology" value="technology" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="technology" value="technology">
                                 <span class="select-box"></span>
                                 <span class="text">Technology</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="food">
-                                <input type="checkbox" id="food" value="food" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="food" value="food">
                                 <span class="select-box"></span>
                                 <span class="text">Food</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="fashion">
-                                <input type="checkbox" id="fashion" value="fashion" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="fashion" value="fashion">
                                 <span class="select-box"></span>
                                 <span class="text">fashion</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="healthcare">
-                                <input type="checkbox" id="healthcare" value="healthcare" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="healthcare" value="healthcare">
                                 <span class="select-box"></span>
                                 <span class="text">healthcare</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="lifestyle">
-                                <input type="checkbox" id="lifestyle" value="lifestyle" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="lifestyle" value="lifestyle">
                                 <span class="select-box"></span>
                                 <span class="text">lifestyle</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="manufacturing">
-                                <input type="checkbox" id="manufacturing" value="manufacturing" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="manufacturing" value="manufacturing">
                                 <span class="select-box"></span>
                                 <span class="text">manufacturing</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="it">
-                                <input type="checkbox" id="it" value="it" name="it">
+                                <input type="checkbox" name="area_of_expertise[]" value="it">
                                 <span class="select-box"></span>
                                 <span class="text">it</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="productivity">
-                                <input type="checkbox" id="productivity" value="productivity" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="productivity" value="productivity">
                                 <span class="select-box"></span>
                                 <span class="text">productivity</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="marketing">
-                                <input type="checkbox" id="marketing" value="marketing" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="marketing" value="marketing">
                                 <span class="select-box"></span>
                                 <span class="text">marketing</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="sociology">
-                                <input type="checkbox" id="sociology" value="sociology" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="sociology" value="sociology">
                                 <span class="select-box"></span>
                                 <span class="text">sociology</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="economics">
-                                <input type="checkbox" id="economics" value="economics" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="economics" value="economics">
                                 <span class="select-box"></span>
                                 <span class="text">economics</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="startups">
-                                <input type="checkbox" id="startups" value="startups" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="startups" value="startups">
                                 <span class="select-box"></span>
                                 <span class="text">startups</span>
                             </label>
                         </div>
                         <div class="items">
                             <label for="content">
-                                <input type="checkbox" id="content" value="content" name="area_of_expertise[]">
+                                <input type="checkbox" name="area_of_expertise[]" id="content" value="content">
                                 <span class="select-box"></span>
                                 <span class="text">website content</span>
                             </label>
+                        </div>
+                        <div class="items">
+                            <label for="whitepaper">
+                                <input type="checkbox" name="area_of_expertise[]" id="whitepaper" value="whitepaper">
+                                <span class="select-box"></span>
+                                <span class="text">white paper</span>
+                            </label>
+                        </div>
+                        <div class="items">
+                            <label for="other">
+                                <input type="checkbox" name="area_of_expertise[]" id="other" value="other">
+                                <span class="select-box"></span>
+                                <span class="text">other</span>
+                            </label>
+                            <input type="text" name="other_category" placeholder="Please specify">
                         </div>
                     </div>
 
@@ -209,11 +224,18 @@
                                 <span class="text">inspiring</span>
                             </label>
                         </div>
+                        <div class="items">
+                            <label for="precise">
+                                <input type="checkbox" id="precise" value="precise" name="writing_style[]">
+                                <span class="select-box"></span>
+                                <span class="text">precise</span>
+                            </label>
+                        </div>
                     </div>
 
                 </div>
                 <div class="group">
-                    <label for="sample">sample of work</label>
+                    <label for="sample">sample of work *</label>
                     <input type="text" id="sample" placeholder="Ex: Game of Thrones" name="sample_of_work">
                 </div>
 

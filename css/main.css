@@ -711,7 +711,7 @@ svg.l-icon {
             }
             .boxes {
                 display: flex;
-                justify-content: space-between;
+                /* justify-content: space-between; */
                 max-width: 80%;
                 margin: 0px auto;
                 flex-wrap: wrap;
@@ -1309,3 +1309,7 @@ a.inline-link:hover {
     font-size: 13px;
 }
 
+
+.form-inner section form input[name="other_category"] {
+    display: none;
+}

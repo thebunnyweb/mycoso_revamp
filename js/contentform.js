@@ -95,7 +95,7 @@ $(document).ready(function () {
             formData.append('other',$('input[name="other"]').val());
             
             formData.append('industry',$('input[name="industry"]').val());
-            formData.append('expertise',$('input[name="expertise"]').val());
+            formData.append('expertise',$('input[name="expertise"]:checked').val());
             
 
             $.ajax({

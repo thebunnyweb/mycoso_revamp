@@ -338,7 +338,7 @@ $(document).ready(function () {
       formData.append('name', $('input[name="name"]').val());
       formData.append('email', $('input[name="email"]').val());
       formData.append('phone', $('input[name="phone"]').val());
-      formData.append('profession', $('input[name="profession"]').val());
+      formData.append('profession', $('input[name="profession"]:checked').val());
       formData.append('message', $('#message').val());
 
       $.ajax({
