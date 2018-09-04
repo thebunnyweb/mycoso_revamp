@@ -68,10 +68,12 @@ $('#other').on('change', function(){
         required: true
       },
       'area_of_expertise[]': {
+        required: true,
         minlength: 3,
         maxlength: 6
       },
       'writing_style[]': {
+        required: true,
         minlength: 1,
         maxlength: 3
       },
@@ -98,11 +100,13 @@ $('#other').on('change', function(){
         required: 'Select your experience.'
       },
       'area_of_expertise[]': {
+        required: 'Atleast three is to be selected.',
         minlength: 'Atleast three is to be selected.',
         maxlength: 'You can only select maximum of 6 categories.'
       },
       'writing_style[]': {
-        minlength: 'Atleast One is to be selected.',
+        required: 'Atleast one is to be selected.',
+        minlength: 'Atleast one is to be selected.',
         maxlength: 'You can only select maximum of 3 categories.'
       },
       other_category: {
