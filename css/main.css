@@ -1264,3 +1264,9 @@ a.l-btn.inverse.small, button.l-btn.inverse.small {
 p.note{
     font-size: 12px;
 }
+
+.section.l2 p:first-child {
+    font-size: 1.5em;
+    line-height: 25px;
+
+}
