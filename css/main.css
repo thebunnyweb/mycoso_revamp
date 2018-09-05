@@ -932,6 +932,7 @@ svg.l-icon {
 }
 
 @media (max-width: 767px) {
+    
     .brand p {
         margin-left: 20px;
     }
@@ -1083,7 +1084,11 @@ svg.l-icon {
         max-width: 100%;
         font-size: 2.5em;
         line-height: 40px;
-        margin-top: 40px
+        margin-top: 40px;
+    }
+    .info p {
+        margin-top: 20px;
+        width:90% !important;
     }
     .section.l4 {
         min-height: 50vh;
@@ -1094,6 +1099,28 @@ svg.l-icon {
     .info a {
         margin-top: 15px;
     }
+    div#particle-js {
+        height: auto;
+        min-height: unset;
+        padding: 21px 4%;
+    }
+    
+    .section {
+        min-height: fit-content;
+    }
+    
+    .section.l2 p:first-child {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+        margin: 20px 0;
+    }
+    
+    .contact_animation {
+        display: block;
+        width: 100%;
+    }
+    
 }
 
 
@@ -1312,4 +1339,8 @@ a.inline-link:hover {
 
 .form-inner section form input[name="other_category"] {
     display: none;
+}
+
+.form-inner section form .group.action{
+    text-align: center;
 }

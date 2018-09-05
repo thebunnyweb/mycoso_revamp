@@ -48,6 +48,14 @@ $('#other').on('change', function(){
   
 });
 
+$('input[name="file"]').on('change', function() {
+	if(this.value && this.vale !== ""){
+		$('span.text-btn').html(this.value);
+    }else{
+		$('span.text-btn').html('File Upload');
+	}
+});
+
   $('#writerForm').validate({
     rules: {
       name: {
@@ -124,7 +132,13 @@ $('#other').on('change', function(){
       formdata.append('blog', $('input[name="blog"]').val());
       formdata.append('sample_of_work', $('input[name="sample_of_work"]').val());
       formdata.append('file', $('input[name="file"]')[0].files[0]);
-
+      formdata.append('fbprofile', $('input[name="fbprofile"]').val());
+      formdata.append('fbpage', $('input[name="fbpage"]').val());
+      formdata.append('twitter', $('input[name="twitter"]').val());
+      formdata.append('instagram', $('input[name="instagram"]').val());
+      formdata.append('pinterest', $('input[name="pinterest"]').val());
+      formdata.append('google', $('input[name="google"]').val());
+      formdata.append('other_link', $('input[name="other_link"]').val());
 
       var areaOfExpertise = $('input[name="area_of_expertise[]"]:checked').map(function(i, e) {return e.value}).toArray();
       var writingStyle = $('input[name="writing_style[]"]:checked').map(function(i, e) {return e.value}).toArray();
@@ -134,31 +148,27 @@ $('#other').on('change', function(){
         var otherindex = areaOfExpertise.indexOf("other");
         areaOfExpertise.splice(otherindex, 1);
         var otherData = $('input[name="other_category"]').val();
-        areaOfExpertise.push(otherData);
-        
+        areaOfExpertise.push(otherData); 
       }
-
       formdata.append('area_of_expertise[]', areaOfExpertise);
       formdata.append('writing_style[]', writingStyle);
-      
 
-
-        // $.ajax({
-        //   url: 'https://glauconitic-crosses.000webhostapp.com?writeradd=new',
-        //   dataType: 'JSON',
-        //   data: formdata,
-        //   type: 'POST',
-        //   processData: false, 
-        //   contentType: false,
-        //   success: function(result){
-        //     if(result.length > 0 ){
-        //       $('.overlay').css('display', 'block');
-        //     }
-        //   },
-        //   error: function(error){
-        //     console.log(error);
-        //   }
-        // });
+        $.ajax({
+          url: 'https://glauconitic-crosses.000webhostapp.com?writeradd=new',
+          dataType: 'JSON',
+          data: formdata,
+          type: 'POST',
+          processData: false, 
+          contentType: false,
+          success: function(result){
+            if(result.length > 0 ){
+              $('.overlay').css('display', 'block');
+            }
+          },
+          error: function(error){
+            console.log(error);
+          }
+        });
     }
   });
 
