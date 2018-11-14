@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Khula:400,800');
 @import "./jquery.fullpage.css";
 @import "./slick.min.css";
+
 $carbon: #4F535F;
 $white: #fff;
+$tqblue: #57afad;
+
 * {
     padding: 0;
     margin: 0;
@@ -155,9 +158,9 @@ nav .links ul li a.active::after {
 }
 
 .section.l1 .caption {
-    font-size: 6em;
+    font-size: 4.5em;
     font-weight: 800;
-    line-height: 86px;
+    line-height: 60px;
     max-width: 83%;
     /* color: #4F535F; */
     margin-top: 50px;
@@ -840,15 +843,15 @@ svg.l-icon {
 
 @media (max-width: 1365px) {
     .section.l1 .caption {
-        font-size: 7em;
-        line-height: 93px;
+        font-size: 4.5em;
+        line-height: 60px;
     }
 }
 
 @media (max-width: 1280px) {
     .section.l1 .caption {
-        font-size: 7em;
-        line-height: 93px;
+        font-size: 4.5em;
+        line-height: 60px;
     }
     .mask-above h2 {
         font-size: 271px;
@@ -1294,8 +1297,8 @@ p.note{
 }
 
 .section.l2 p:first-child {
-    font-size: 1.5em;
-    line-height: 25px;
+    font-size: 1.3em;
+    line-height: 24px;
 
 }
 

@@ -100,7 +100,7 @@ $(document).ready(function () {
     function fullpage() {
       $('#slider').fullpage({
         css3: true,
-        scrollingSpeed: 700,
+        scrollingSpeed: 550,
         fitToSectionDelay: 2500,
         responsiveWidth: 767,
         onLeave: function (index, nextIndex, direction) {
@@ -139,7 +139,7 @@ $(document).ready(function () {
           if (nextIndex === 1) {
           } else if (nextIndex === 2) {
 
-            $('video')[0].play();
+            // $('video')[0].play();
             TweenMax.staggerFrom(
               staggerElementsl2,
               0.8,
@@ -157,7 +157,7 @@ $(document).ready(function () {
               sectionl3,
               0.5,
               { backgroundColor: '#fff' },
-              { backgroundColor: '#000', delay: 0.5 }
+              { backgroundColor: '#57afad', delay: 0.5 }
             );
             TweenMax.fromTo(
               sectionl3caption,
