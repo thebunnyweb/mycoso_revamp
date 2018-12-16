@@ -40,7 +40,7 @@ svg {
 }
 
 .section {
-    padding: 2% 0% 0 10%;
+    padding: 0% 0% 0 10%;
     position: relative;
 }
 
@@ -49,7 +49,7 @@ svg {
     top: 0;
     left: 0;
     height: 3px;
-    background: #ea0000;
+    background: #5dafad;
 }
 
 header {
@@ -582,7 +582,7 @@ iframe {
 }
 
 svg.l-icon:hover {
-    fill: #ea0000;
+    fill: #5dafad;
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -1148,12 +1148,12 @@ a.l-btn.inverse:hover, button.l-btn.inverse:hover {
 
 
 .section.l2[direction="up"] .mask {
-    margin-top: 25px
+    margin-top: 0px
 
 }
 
 .section.l3[direction="up"] .reviews {
-    margin-top: 25px
+    margin-top: 0px
     
 }
 
@@ -1319,7 +1319,7 @@ a.inline-link:hover {
     font-size: 1em;
     line-height: 18px;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 9px;
     font-weight: 100;
 }
 
@@ -1340,6 +1340,8 @@ a.inline-link:hover {
 }
 
 
+/* New CR Changes */
+
 .form-inner section form input[name="other_category"] {
     display: none;
 }
@@ -1347,3 +1349,120 @@ a.inline-link:hover {
 .form-inner section form .group.action{
     text-align: center;
 }
+
+
+.section.l1 .caption,.section.l1 .subcaption,
+.brand p,nav .links ul li a,
+{
+    color: #464646;
+}
+
+.section.l1 .subcaption span,
+nav .links ul li a.active, nav .links ul li a:hover,
+.section.l2 p:first-child span,
+.linkanchor:hover,
+.info p span {
+    color: #5dafad;
+}
+
+nav .links ul li a:after {
+    background: #464646
+}
+
+html,body{
+    color: #464646
+}
+
+svg.l-icon{
+    fill: #464646;
+}
+
+.section.l2 p:first-child {
+    font-weight: 100;
+    font-size: 1.2em
+}
+
+.social svg.l-icon {
+    fill: #5dafad;
+}
+
+.linkanchor {
+    color: #464646;
+    text-transform: lowercase;
+    display: inline-block;
+    font-style: italic
+}
+
+a.l-btn, button.l-btn {
+    border-color: #ccc;
+}
+
+a.l-btn:hover, button.l-btn:hover,
+a.l-btn:hover:after, button.l-btn:hover:after {
+    color: #5dafad
+}
+
+nav .links.white ul li a.active{
+    color: #464646
+}
+
+#particle-js .reviews .item h2 {
+    color: #464646;
+    font-size: 2.6em;
+    text-align: left;
+}
+
+#particle-js .reviews .item p:nth-child(2) {
+    color: #464646;
+    font-weight: 100;
+}
+
+#particle-js .reviews .item p:nth-child(3) {
+    color: #464646;
+}
+
+.info p {
+   color: #464646;
+   font-weight: 100;
+   font-size: 2.4em;
+   line-height: 40px;
+}
+
+.feedback,.contact_animation{
+    background: #5dafad
+}
+
+.feedback .l-btn.inverse {
+    background: white;
+    color: #5dafad
+}
+
+.feedback .l-btn.inverse::after{
+    color: #5dafad    
+}
+
+.feedback .l-btn.inverse:hover{
+    color: #5dafad;
+    border-color: #464646;
+}
+.feedback form input,
+.form-group.message textarea {
+    border-color: #FFF
+}
+
+.typography {
+    display: flex;
+    align-items: center;
+}
+.section.l2 p:first-child {
+    max-width: 80%;
+}
+
+
+.bookposter{
+    max-height: 100vh;
+    height: 100%;
+    transform: translateX(100%);
+    width: 30%;
+}
+/* End of New CR Changes */

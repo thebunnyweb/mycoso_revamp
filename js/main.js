@@ -28,7 +28,7 @@ $(document).ready(function () {
     var lineDrawing = anime({
       targets: '.pageloader .lines path',
       strokeDashoffset: [anime.setDashoffset, 0],
-      stroke: '#ea0000',
+      stroke: '#5DAFAD',
       easing: 'easeInOutSine',
       duration: 1500,
       delay: function (el, i) {
@@ -63,7 +63,7 @@ $(document).ready(function () {
 
     //Section l2
     var staggerElementsl2 = $('.section.l2 .box .typography p');
-    var videographyl2 = $('.videography');
+    var videographyl2 = $('.bookposter');
 
     //Section l3
     var sectionl3 = $('.section.l3');
