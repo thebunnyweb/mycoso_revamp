@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MYCOSO::About</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="inner">
+    <header>
+        <nav>
+            <div class="brand">
+                <p><a href="index.html">Mycoso.</a></p>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="#" class="active">About</a></li>
+                    <li><a href="faq.html">F.A.Q</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="heading">
+            <p>About Mycoso</p>
+        </div>
+
+        <div class="aboutwrapper">
+            <p>We are passionate about content marketing. That's why you're here. Because you'd like to be, too.</p>
+            <p>We are a full service content-marketing agency, and we can work on your company as per the goals you
+                want to achieve. We are always available to work through things with you and make sure we're aligned to
+                achieve the best results. Content strategy involves a lot of figuring out what works best for you and
+                your company, and we are prompt in turnaround times and honest in our feedback - both qualities that we
+                feel are extremely necessary in a content strategy + marketing agency.</p>
+            <p>We are making sure good writers and content creators get their due, and that our clients get the kind of
+                good work they deserve.</p>
+            <p>Because we are freelance content marketers and creators ourselves and we know the kind of effort it
+                takes to make a mark in the world, and we've worked with clients who have told us that they often are
+                unable to find good creatives who can deliver the kind of quality they are looking for.
+            </p>
+            <p>We're here to bridge that gap. If you're an impeccable writer and a bit of a grammar nazi, we want you.
+                If you're a company who needs good content and hasn't gotten lucky yet, your luck awaits.
+            </p>
+            <p>Writers, fill up this <a href="writer.html">form</a>, and if you'd like us to work on your content
+                strategy, fill up <a href="content.html">this one.</a>
+            </p>
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="footwrap">
+            <svg class="l-icon" width="100">
+                <use xlink:href="assets/svg.svg#icon-logo">
+            </svg>
+            <div class="footlinks">
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="">Disclaimer</a>
+                    </li>
+                    <li>
+                        <a href="">Press Release</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footcontact">
+                <p>We would be
+                    <span>happy</span> to assit you</p>
+                <p>help@mucoso.com</p>
+                <p>1800 123 0123</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/plugin.js"></script>
+<script>
+    var AccrodianModule = function () {
+        var el = $('.accordian'),
+            title = el.find('ul li p.a-title'),
+            text = el.find('ul li p.a-text');
+
+        title.on('click', toggleAccordian);
+
+        function toggleAccordian() {
+            title.removeClass('active');
+            text.css('display', 'none');
+            $(this).addClass('active')
+            $(this).next().css('display', 'block');
+        }
+
+    }
+
+    AccrodianModule();
+</script>
+
+</html>
