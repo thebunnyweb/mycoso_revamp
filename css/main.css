@@ -1714,3 +1714,6 @@ p.a-text a {
     all: unset;
     cursor: pointer;
 }
+.brand.white .navhover:hover svg {
+    fill: #fff;
+}
