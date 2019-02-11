@@ -1568,7 +1568,7 @@ footer {
     left: 0;
     top: 0;
     width: 100%;
-    padding: 10px;  
+    padding: 5px 30px;  
     box-shadow: 0px 0px 13px 1px rgba(0,0,0,.2);
 }
 
@@ -1717,3 +1717,115 @@ p.a-text a {
 .brand.white .navhover:hover svg {
     fill: #fff;
 }
+
+
+@media(max-width: 767px){
+    .section.l1,
+    .section.l3{
+        background: #5fadad;
+    }
+    .section.l1 .caption{
+        font-size: 3em
+    }
+    .section.l1 .subcaption span{
+        color: #fff;
+    }
+    .typography{
+        flex-direction: column-reverse;
+    }
+    .section.l2 p:first-child{
+        max-width: 100%;
+        width: 100%;
+    }
+    .bookposter{
+        width: 100%;
+        transform: none;
+        height: auto;
+        max-height: none;
+        display: none;
+    }
+    .bookposter img {
+        height: 50vh;
+    }
+    #particle-js .reviews{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    header
+    {
+        z-index: 999;
+        background: #5fadad;
+    }
+}
+
+
+
+/* Radion Button Transition */
+.feedback form input[type=radio]{
+    display: none;
+}
+label.c-radio::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    display: inline-block;
+    border: 2px solid #fff;
+    margin-right: 4px;
+    transition: all .3s ease;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+label.c-radio:active::before {
+    transform: scale(0)
+}
+.feedback .radio label{
+    margin-right: 20px;
+    
+}
+.feedback form input[type=radio]:checked + label.c-radio::before {
+   background: rgb(19, 84, 84);
+}
+/* End of Radio */
+
+
+/* Bottom Link Styling  */
+ul.s-links li {
+    display: inline-block;
+}
+
+ul.s-links li a {
+    font-size: 14px;
+    transition: opacity .3s ease;
+    cursor: pointer;
+    font-style: normal;
+    text-transform: capitalize;
+    margin:  0 0 0 20px;
+    font-weight: 400;
+}
+/* End of bottom link styling */
+
+
+/* Inner Footer */
+footer .footwrap svg.l-icon{
+    height: 50px;
+}
+footer {
+    background: #5fadad;
+}
+/* End of Inner Footer */
+
+
+/* Inner Page Heading */
+.s-head {
+    margin-top: 15px;
+}
+.wrapper p:last-child{
+    margin-bottom: 15px;
+}
+.wrapper ul {
+    list-style: none;
+}
+/* End heading */
