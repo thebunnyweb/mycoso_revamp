@@ -1,8 +1,79 @@
 $(document).ready(function () {
 
 
+
+  $('.l-request').on('click', function(){
+    $('.request-wrapper').toggleClass('reveal')
+  })
+
+  $('.close span').on('click', function(){
+    $('.request-wrapper').removeClass('reveal')
+  })
+
+
+
+  
+    var el = $('.request');
+    
+    el.validate({
+      rules: {
+        website:{
+          required: true
+        },
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        website: {
+          required: 'Website is required'
+        },
+        email: {
+          required: 'Email is required',
+          email: 'Invalid Email'
+        }
+      },
+      submitHandler: function(data){
+        // http://hi.com
+
+        
+        var formdata = $(data).serialize();
+        // formdata.append('llike', $('input[name="llike"]').val());
+        // formdata.append('topic', $('input[name="topic"]').val());
+        // formdata.append('industry', $('input[name="industry"]').val());
+        // formdata.append('larticle', $('input[name="larticle"]').val());
+        // formdata.append('sector', $('input[name="sector"]').val());
+        // formdata.append('website', $('input[name="website"]').val());
+        // formdata.append('email', $('input[name="email"]').val());
+        
+        $.ajax({
+          url: 'http://mycosomedia.com/api/?requestadd=new',
+          dataType: 'JSON',
+          data: formdata,
+          type: 'POST',
+          success: function(result){
+            if(result.length > 0 ){
+              $('.request-wrapper').toggleClass('reveal');
+              setTimeout(function(){
+                $('.notifications').addClass('reveal')
+                setTimeout(function(){
+                  $('.notifications').removeClass('reveal')
+                }, 2500)
+              }, 400)
+            }
+          },
+          error: function(error){
+            console.log('Error', error);
+          }
+        });
+        
+       
+      }
+    })
+
   var options = {
-    strings: ['Pharma.', 'Novels.', 'Logistics'],
+    strings: ['Tech.', 'Travel.', 'Lifestyle.', 'Healthcare.', 'Ghostwriting.','Logistics.', 'Pharma.'],
     typeSpeed: 30,
     loop: true
   };
@@ -87,6 +158,7 @@ $(document).ready(function () {
       links();
     }
 
+  
     function links() {
       $('.links ul li a').on('click', function (e) {
         e.preventDefault();
@@ -280,13 +352,14 @@ $(document).ready(function () {
   } else {
     var windowCurrentPosition = 0;
     $(window).scroll(function () {
-      if (windowCurrentPosition < $(window).scrollTop()) {
-        $('header').addClass('hide');
-        windowCurrentPosition = $(window).scrollTop();
-      } else {
-        $('header').removeClass('hide');
-        windowCurrentPosition = $(window).scrollTop();
-      }
+      // if (windowCurrentPosition < $(window).scrollTop()) {
+      //   $('header').addClass('hide');
+      //   windowCurrentPosition = $(window).scrollTop();
+      // } else {
+      //   $('header').removeClass('hide');
+      //   windowCurrentPosition = $(window).scrollTop();
+      // }
+     
 
     });
   }
@@ -333,21 +406,20 @@ $(document).ready(function () {
         maxlength: 'Reached Max Count.'
       }
     },
-    submitHandler: function(form){
-      var formData = new FormData($('#contactForm'));
-      formData.append('name', $('input[name="name"]').val());
-      formData.append('email', $('input[name="email"]').val());
-      formData.append('phone', $('input[name="phone"]').val());
-      formData.append('profession', $('input[name="profession"]:checked').val());
-      formData.append('message', $('#message').val());
+    submitHandler: function(data){
+      var formdata = $(data).serialize();
+      // var formData = new FormData($('#contactForm'));
+      // formData.append('name', $('input[name="name"]').val());
+      // formData.append('email', $('input[name="email"]').val());
+      // formData.append('phone', $('input[name="phone"]').val());
+      // formData.append('profession', $('input[name="profession"]:checked').val());
+      // formData.append('message', $('#message').val());
 
       $.ajax({
-        url: 'https://glauconitic-crosses.000webhostapp.com?contactadd=new',
+        url: 'http://mycosomedia.com/api/?contactadd=new',
         dataType: 'JSON',
-        data: formData,
+        data: formdata,
         type: 'POST', 
-        processData: false, 
-        contentType: false,
         success: function(result){
           if(result.length > 0 ){
             $('.overlay.contact').css('display', 'block');
@@ -359,6 +431,6 @@ $(document).ready(function () {
       });
       
     }
-  })
+  });
 
 });

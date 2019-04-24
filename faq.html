@@ -15,22 +15,41 @@
             <div class="brand">
                 <p><a href="index.html">Mycoso.</a></p>
             </div>
+            <button class="inner-ham">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <div class="links">
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#" class="active">F.A.Q</a></li>
                     <li><a href="services.html">Services</a></li>
+                    <li><a href='./index.html?request=true'>Request a Sample</li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main>
-        <div class="heading">
-            <p>F.A.Q</p>
+    <div class="jumbo faq">
+        <div class="content">
+            <small>F.A.Q</small>
             <p>Hi and welcome to Mycoso! We hope these FAQs clarify some of the doubts you may have. If you have any
                 doubts that aren't addressed here, feel free to reach out at hello@mycoso.com</p>
+            
+        </div>
+    </div>
+    <main>
+        <div class="heading">
+            <p></p>
+            <!-- <p>Hi and welcome to Mycoso! We hope these FAQs clarify some of the doubts you may have. If you have any
+                doubts that aren't addressed here, feel free to reach out at hello@mycoso.com</p> -->
         </div>
         <div class="accordian">
+                <div class="heading">
+                        <p>For Writers
+                        </p>
+        
+                    </div>
             <ul>
                 <li>
                     <p class="a-title">How does Mycoso work?</p>
@@ -110,7 +129,7 @@
                 </li>
                 <li>
                         <p class="a-title">What are the payment options?</p>
-                        <p class="a-text">As of now we do bank transfer, Paypal and PayTM.  We are in the process of setting up encryption on the site to ensure that money transfers go through the website easily. As safety is paramount, we'd rather stick to our banking institutions as of now, till we have everything perfectly in place.</p>
+                        <p class="a-text">As of now we do bank transfer, Paypal and PayUMoney.  We are in the process of setting up encryption on the site to ensure that money transfers go through the website easily. As safety is paramount, we'd rather stick to our banking institutions as of now, till we have everything perfectly in place.</p>
                 </li>
                 <li>
                         <p class="a-title">Do you provide add on services?</p>
@@ -128,31 +147,26 @@
     </main>
     <footer>
         <div class="footwrap">
-            <svg class="l-icon" width="100">
-                <use xlink:href="assets/svg.svg#icon-logo">
-            </svg>
+            <a href="./"> 
+                <svg class="l-icon" width="100">
+                    <use xlink:href="assets/svg.svg#icon-logo">
+                </svg>
+            </a>
             <div class="footlinks">
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#">Disclaimer</a>
-                    </li>
-                    <li>
-                        <a href="#">Press Release</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footcontact">
-                <p>We would be
-                    <span>happy</span> to assit you</p>
-                <p>help@mucoso.com</p>
-                <p>1800 123 0123</p>
-            </div>
+                    <ul>
+                        
+                        <li>
+                            <a href="./privacy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="./terms.html">Terms of service</a>
+                        </li>
+                        <li>
+                            <a href="https://intermediate-precau.000webhostapp.com/">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            
         </div>
     </footer>
 </body>
@@ -167,14 +181,21 @@
 
         function toggleAccordian() {
             title.removeClass('active');
+            title.parent().removeClass('active');
             text.css('display', 'none');
             $(this).addClass('active')
+            $(this).parent().addClass('active')
             $(this).next().css('display', 'block');
         }
 
     }
 
     AccrodianModule();
+
+
+    $('.inner-ham').on('click', function(){
+	$('.links').toggleClass('reveal')
+    })
 </script>
 
 </html>

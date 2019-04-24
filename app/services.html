@@ -15,31 +15,45 @@
             <div class="brand">
                 <p><a href="index.html">Mycoso.</a></p>
             </div>
+            <button class="inner-ham">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <div class="links">
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="faq.html">F.A.Q</a></li>
                     <li><a href="#" class="active">Services</a></li>
+                    <li><a href="./index.html?request=true">Request a Sample</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <div class="jumbo faq">
+            <div class="content">
+                <small>Our Services</small>
+            </div>
+        </div>
     <main>
         <div class="heading">
-            <p>Our Services</p>
+            
             
         </div>
         <div class="servicewrapper">
             <div class="item">
                 <p class="heading">Blogposts - Basic</p>
+                <img src="./assets/001-like.png" alt="Liked">
                 <p class="subtitle">We write articles and blog posts for you - as many as you want and as often as you require it. If you need it more frequently, we also have a monthly subscription plan. Every working day, we send across an article. Just provide blog post titles, topics and keywords, and you're all set!</p>
             </div>
             <div class="item">
                 <p class="heading">Content Marketing Plan - Premium</p>
+                <img src="./assets/002-hand-with-white-outline-forming-a-rock-on-symbol.png" alt="Rocked">
                 <p class="subtitle">We do the research, create short term and long term strategies, SEO + keyword research and analysis, work out how to increase your reach and visibility, and create an overall plan encompassing these points and more. We are also happy to review your current plan and provide feedback. Here also, we provide a monthly review option.</p>
             </div>
             <div class="item">
                 <p class="heading">Content Solutions Package - Comprehensive</p>
+                <img src="./assets/003-pint.png" alt="Rocked">
                 <p class="subtitle">This includes the Content Marketing Plan and much more.</p>
                 <p class="subtitle">Along with creating/refining your plan, we implement it for you - handling your website, blog and social presence ourselves. Which means that we will regularly be working on modifying the strategies based on what works and what doesn't, and update the plan as we go. We will work closely to ensure that we are always innovating and always in sync.</p>
             </div>
@@ -47,59 +61,42 @@
 
 
         <p class="note">
-                If you want any or all of the above, or something else entirely that you'd like us to do for you, please send us an email at <a href="mailto:team@mycoso.com">team@mycoso.com</a> or fill up the <a href="index.html">Contact form.</a>
+                If you want any or all of the above, or something else entirely that you'd like us to do for you, please send us an email at <a href="mailto:team@mycosomedia.com">team@mycosomedia.com</a> or fill up the <a href="index.html">Contact form.</a>
         </p>
         <small>We'd get back to you within 24 hours.</small>
     </main>
     <footer>
         <div class="footwrap">
-            <svg class="l-icon" width="100">
-                <use xlink:href="assets/svg.svg#icon-logo">
-            </use></svg>
+                <a href="./"> 
+                    <svg class="l-icon" width="100">
+                        <use xlink:href="assets/svg.svg#icon-logo">
+                    </use></svg>
+                </a>
             <div class="footlinks">
-                <ul>
-                    <li>
-                        <a href="">Home</a>
-                    </li>
-                    <li>
-                        <a href="">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="">Disclaimer</a>
-                    </li>
-                    <li>
-                        <a href="">Press Release</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footcontact">
-                <p>We would be
-                    <span>happy</span> to assit you</p>
-                <p>help@mucoso.com</p>
-                <p>1800 123 0123</p>
-            </div>
+                    <ul>
+                        
+                        <li>
+                            <a href="./privacy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="./terms.html">Terms of Service</a>
+                        </li>
+                        <li>
+                                <a href="https://intermediate-precau.000webhostapp.com/">Blog</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            
         </div>
     </footer>
 </body>
 <script src="js/plugin.js"></script>
 <script>
-    var AccrodianModule = function () {
-        var el = $('.accordian'),
-            title = el.find('ul li p.a-title'),
-            text = el.find('ul li p.a-text');
 
-        title.on('click', toggleAccordian);
-
-        function toggleAccordian() {
-            title.removeClass('active');
-            text.css('display', 'none');
-            $(this).addClass('active')
-            $(this).next().css('display', 'block');
-        }
-
-    }
-
-    AccrodianModule();
+    $('.inner-ham').on('click', function(){
+	$('.links').toggleClass('reveal')
+    })
 </script>
 
 </html>

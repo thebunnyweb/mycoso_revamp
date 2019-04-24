@@ -121,10 +121,10 @@ $('input[name="file"]').on('change', function() {
         required: 'Field is required.'
       }
     },
-    submitHandler: function(form) {
-       //var formdata = $(form).serialize();
-       
-      var formdata = new FormData($('#writerForm'));
+    submitHandler: function(form) { 
+
+      var formdata = new FormData(form);
+      
       formdata.append('name', $('input[name="name"]').val());
       formdata.append('email', $('input[name="email"]').val());
       formdata.append('pen_name', $('input[name="penname"]').val());
@@ -139,9 +139,11 @@ $('input[name="file"]').on('change', function() {
       formdata.append('pinterest', $('input[name="pinterest"]').val());
       formdata.append('google', $('input[name="google"]').val());
       formdata.append('other_link', $('input[name="other_link"]').val());
-
+      
       var areaOfExpertise = $('input[name="area_of_expertise[]"]:checked').map(function(i, e) {return e.value}).toArray();
       var writingStyle = $('input[name="writing_style[]"]:checked').map(function(i, e) {return e.value}).toArray();
+
+      
 
 
       if($('#other').is(':checked')){
@@ -153,23 +155,27 @@ $('input[name="file"]').on('change', function() {
       formdata.append('area_of_expertise[]', areaOfExpertise);
       formdata.append('writing_style[]', writingStyle);
 
+      
+
         $.ajax({
-          url: 'https://glauconitic-crosses.000webhostapp.com?writeradd=new',
-          dataType: 'JSON',
+          url: 'http://mycosomedia.com/api/?writeradd=new',
           data: formdata,
+          processData: false,
           type: 'POST',
-          processData: false, 
-          contentType: false,
           success: function(result){
             if(result.length > 0 ){
               $('.overlay').css('display', 'block');
             }
           },
           error: function(error){
-            console.log(error);
+              console.log(error);
           }
         });
+
+        
     }
+
+
   });
 
 

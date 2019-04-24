@@ -99,7 +99,7 @@ $(document).ready(function () {
             
 
             $.ajax({
-                url: 'https://glauconitic-crosses.000webhostapp.com/?contentadd=new',
+                url: 'http://mycosomedia.com/api/?contentadd=new',
                 dataType: 'JSON',
                 data: formData, 
                 type: 'POST',

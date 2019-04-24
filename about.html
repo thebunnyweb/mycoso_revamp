@@ -15,27 +15,56 @@
             <div class="brand">
                 <p><a href="index.html">Mycoso.</a></p>
             </div>
+            <button class="inner-ham">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <div class="links">
                 <ul>
                     <li><a href="#" class="active">About</a></li>
                     <li><a href="faq.html">F.A.Q</a></li>
                     <li><a href="services.html">Services</a></li>
+                    <li><a href='./index.html?request=true'>Request a Sample</li>
                 </ul>
             </div>
         </nav>
     </header>
+    <div class="jumbo faq">
+        <div class="content">
+            <small>About Mycoso</small>
+        </div>
+    </div>
     <main>
         <div class="heading">
-            <p>About Mycoso</p>
+            
         </div>
 
         <div class="aboutwrapper">
+            <div class="wrap-main">
+                    <p>
+                            We are passionate about writing. So we are making sure good writers get their due, and
+                            that our clients
+                            get the kind of good work they deserve. Because we are freelance writers ourselves and
+                            we know
+                            the kind of effort it takes to make a mark in the world, and we&#39;ve worked with
+                            clients who
+                            have told us that they often are unable to find good writers who can deliver the kind
+                            of quality
+                            they are looking for.
+                    </p>
+                    <img src="./assets/aboutteam.png" alt="Team">
+            </div>
+            
             <p>We are passionate about content marketing. That's why you're here. Because you'd like to be, too.</p>
+            <div class="wrap-main left">
+                    <img src="./assets/aboutteam2.png" alt="Agency">
             <p>We are a full service content-marketing agency, and we can work on your company as per the goals you
                 want to achieve. We are always available to work through things with you and make sure we're aligned to
                 achieve the best results. Content strategy involves a lot of figuring out what works best for you and
                 your company, and we are prompt in turnaround times and honest in our feedback - both qualities that we
                 feel are extremely necessary in a content strategy + marketing agency.</p>
+                </div>
             <p>We are making sure good writers and content creators get their due, and that our clients get the kind of
                 good work they deserve.</p>
             <p>Because we are freelance content marketers and creators ourselves and we know the kind of effort it
@@ -54,53 +83,35 @@
     </main>
     <footer>
         <div class="footwrap">
-            <svg class="l-icon" width="100">
-                <use xlink:href="assets/svg.svg#icon-logo">
-            </svg>
+                <a href="./"> 
+                    <svg class="l-icon" width="100">
+                        <use xlink:href="assets/svg.svg#icon-logo">
+                    </svg>
+                </a>
             <div class="footlinks">
                 <ul>
+                    
                     <li>
-                        <a href="">Home</a>
+                        <a href="./privacy.html">Privacy Policy</a>
                     </li>
                     <li>
-                        <a href="">Privacy Policy</a>
+                        <a href="./terms.html">Terms of service</a>
                     </li>
                     <li>
-                        <a href="">Disclaimer</a>
-                    </li>
-                    <li>
-                        <a href="">Press Release</a>
+                        <a href="https://intermediate-precau.000webhostapp.com/">Blog</a>
                     </li>
                 </ul>
             </div>
-            <div class="footcontact">
-                <p>We would be
-                    <span>happy</span> to assit you</p>
-                <p>help@mucoso.com</p>
-                <p>1800 123 0123</p>
-            </div>
+       
         </div>
     </footer>
 </body>
 <script src="js/plugin.js"></script>
 <script>
-    var AccrodianModule = function () {
-        var el = $('.accordian'),
-            title = el.find('ul li p.a-title'),
-            text = el.find('ul li p.a-text');
-
-        title.on('click', toggleAccordian);
-
-        function toggleAccordian() {
-            title.removeClass('active');
-            text.css('display', 'none');
-            $(this).addClass('active')
-            $(this).next().css('display', 'block');
-        }
-
-    }
-
-    AccrodianModule();
+    
+    $('.inner-ham').on('click', function(){
+	$('.links').toggleClass('reveal')
+    })
 </script>
 
 </html>

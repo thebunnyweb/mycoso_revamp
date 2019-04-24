@@ -15,11 +15,17 @@
             <div class="brand">
                 <p><a href="index.html">Mycoso.</a></p>
             </div>
+            <button class="inner-ham">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <div class="links">
                 <ul>
                     <li><a href="about.html">About</a></li>
                     <li><a href="./faq.html">F.A.Q</a></li>
                     <li><a href="services.html">Services</a></li>
+                    <li><a href="./index.html?request=true">Request a Sample</a></li>
                 </ul>
             </div>
         </nav>
@@ -307,28 +313,34 @@
     </main>
     <footer>
         <div class="footwrap">
-            <svg class="l-icon" width="100">
-                <use xlink:href="assets/svg.svg#icon-logo">
-            </use></svg>
+                <a href="./"> 
+                    <svg class="l-icon" width="100">
+                        <use xlink:href="assets/svg.svg#icon-logo">
+                    </use></svg>
+                </a>
             <div class="footlinks">
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Privacy Policy</a>
-                    </li>
-                    <li>
-                        <a href="#">Disclaimer</a>
-                    </li>
-                    <li>
-                        <a href="#">Press Release</a>
-                    </li>
-                </ul>
-            </div>
+                    <ul>
+                        
+                        <li>
+                            <a href="./privacy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="./terms.html">Terms & Condition</a>
+                        </li>
+                        <li>
+                            <a href="https://intermediate-precau.000webhostapp.com/">Blog</a>
+                        </li>
+                        
+                    </ul>
+                </div>
 
         </div>
     </footer>
 </body>
-
+<script src="js/plugin.js"></script>
+<script>
+    $('.inner-ham').on('click', function(){
+	$('.links').toggleClass('reveal')
+    })
+</script>
 </html>

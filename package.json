@@ -8,7 +8,8 @@
     "clean": "rimraf app",
     "test": "node test.js",
     "build": "gulp",
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "surge --project ./app --domain https://mycoso.surge.sh"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,7 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-postcss": "^7.0.1",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.4.0",
     "gulp-stylelint": "^6.0.0",
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.1",
@@ -44,6 +45,7 @@
   },
   "dependencies": {
     "express": "^4.16.2",
-    "jquery-validation": "^1.17.0"
+    "jquery-validation": "^1.17.0",
+    "surge": "^0.20.1"
   }
 }

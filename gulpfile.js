@@ -22,6 +22,10 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./app/css/'));
 });
 
+gulp.task('admincss', function(){
+  return gulp.src('./css/admin.css').pipe(gulp.dest('./app/css'))
+})
+
 gulp.task('imagemin', function() {
   return gulp
     .src('./assets/**/*')
@@ -53,7 +57,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('mainscripts', function() {
-  return gulp.src(['./js/main.js', './js/form.js']).pipe(gulp.dest('./app/js'));
+  return gulp.src(['./js/main.js', './js/form.js', './js/data.js']).pipe(gulp.dest('./app/js'));
 });
 
 gulp.task('spritesvg', function() {
@@ -73,9 +77,9 @@ gulp.task(
 
 gulp.task(
   'default',
-  ['htmlmin', 'styles', 'imagemin', 'spritesvg', 'scripts','mainscripts'],
+  ['htmlmin', 'styles', 'imagemin', 'spritesvg', 'scripts','mainscripts', 'admincss'],
   function() {
-    gulp.watch('./css/**/*.css', ['styles']);
+    gulp.watch('./css/**/*.css', ['styles', 'admincss']);
     gulp.watch('./js/**/*.js', ['scripts','mainscripts']);
     gulp.watch('./**/*.html',['htmlmin'])
   }
